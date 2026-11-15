@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O/L English Literature Hub | Sri Lanka G.C.E. Study Guide</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Google Fonts: Playfair Display (Literary Serif) & Inter (Legible Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        parchment: {
+                            50: '#FAF8F5',
+                            100: '#F3EFEA',
+                            200: '#E6DFD5',
+                            800: '#26221E',
+                            900: '#1C1917',
+                        },
+                        burgundy: {
+                            50: '#FDF2F4',
+                            100: '#FCE7EB',
+                            600: '#8B2635',
+                            700: '#701D29',
+                            800: '#581620',
+                        },
+                        ink: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Sepia Mode Overrides */
+        body.sepia-mode {
+            background-color: #F4ECD8 !important;
+            color: #433422 !important;
+        }
+        body.sepia-mode header,
+        body.sepia-mode footer {
+            background-color: rgba(244, 236, 216, 0.92) !important;
+            border-color: #DFD2B5 !important;
+        }
+        body.sepia-mode .bg-white,
+        body.sepia-mode .bg-parchment-50,
+        body.sepia-mode .bg-parchment-100\/70 {
+            background-color: #FAF3E3 !important;
+            border-color: #DFD2B5 !important;
+        }
+    </style>
+</head>
+<body id="app-body" class="bg-parchment-50 text-ink-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-burgundy-600 selection:text-white">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="sticky top-0 z-40 bg-parchment-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-parchment-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Brand Title -->
+                <a href="#top" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-burgundy-600 text-white flex items-center justify-center shadow-sm group-hover:bg-burgundy-700 transition-colors">
+                        <i class="fas fa-feather-pointed text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-lg sm:text-xl text-ink-900 dark:text-white tracking-tight block leading-none">
+                            LitHub <span class="text-burgundy-600 dark:text-amber-400">O/L</span>
+                        </span>
+                        <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400 tracking-wide uppercase">
+                            Sri Lanka Syllabus
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-7">
+                    <a href="#syllabus" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Anthology Texts</a>
+                    <a href="#devices" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Literary Devices</a>
+                    <a href="#exam-guide" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Answer Writing</a>
+                    <a href="#quiz" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Practice Quiz</a>
+                </nav>
+
+                <!-- Reading Mode Switcher & Mobile Menu -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- 3-Mode Reading Toggle (Cream / Sepia / Night) -->
+                    <div class="flex items-center bg-parchment-100 dark:bg-slate-800 p-1 rounded-xl border border-parchment-200 dark:border-slate-700" role="group" aria-label="Reading Theme">
+                        <button data-theme="light" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-white text-ink-900 shadow-sm transition-all" title="Warm Parchment Mode">
+                            <i class="fas fa-sun text-amber-600"></i>
+                            <span class="hidden lg:inline ml-1">Parchment</span>
+                        </button>
+                        <button data-theme="sepia" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-ink-900 transition-all" title="Warm Sepia Reading Mode">
+                            <i class="fas fa-book-open text-amber-700"></i>
+                            <span class="hidden lg:inline ml-1">Sepia</span>
+                        </button>
+                        <button data-theme="dark" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-white transition-all" title="Night Study Mode">
+                            <i class="fas fa-moon text-indigo-400"></i>
+                            <span class="hidden lg:inline ml-1">Night</span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-parchment-50 dark:bg-slate-900 border-b border-parchment-200 dark:border-slate-800 px-4 pt-2 pb-5 space-y-1.5 shadow-lg">
+            <a href="#syllabus" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">1. Anthology Study Guides</a>
+            <a href="#devices" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">2. Literary Devices Cheat-Sheet</a>
+            <a href="#exam-guide" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">3. Exam Answer Writing (PEEL)</a>
+            <a href="#quiz" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-burgundy-600 dark:text-amber-400 bg-burgundy-50 dark:bg-slate-800/80">4. Self-Check Practice Quiz</a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="top" class="relative py-16 sm:py-24 overflow-hidden border-b border-parchment-200/80 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold tracking-wide uppercase mb-6">
+                <i class="fas fa-graduation-cap"></i>
+                G.C.E. Ordinary Level &bull; Appreciation of English Literary Texts
+            </div>
+
+            <h1 class="font-serif font-extrabold text-4xl sm:text-5xl lg:text-6xl text-ink-900 dark:text-white tracking-tight leading-[1.15]">
+                O/L English Literature <span class="text-burgundy-600 dark:text-amber-400 italic">Hub</span>
+            </h1>
+
+            <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                Your structured companion for the Sri Lankan G.C.E. O/L Literature anthology. Explore concise summaries, themes, poetic techniques, context question tips, and practice quizzes.
+            </p>
+
+            <!-- Quick-Jump Action Buttons -->
+            <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+                <a href="#syllabus" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm shadow-md shadow-burgundy-600/20 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-book"></i>
+                    Explore Syllabus Texts
+                </a>
+                <a href="#devices" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-sparkles text-amber-600"></i>
+                    Literary Devices
+                </a>
+                <a href="#quiz" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-pen-to-square text-burgundy-600 dark:text-amber-400"></i>
+                    Take Practice Quiz
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE SYLLABUS EXPLORER ==================== -->
+    <section id="syllabus" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Heading & Genre Filter Tabs -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-parchment-200 dark:border-slate-800">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-burgundy-600 dark:text-amber-400">Anthology Guide</span>
+                    <h2 class="mt-2 font-serif font-bold text-3xl sm:text-4xl text-ink-900 dark:text-white">
+                        Prescribed Literary Texts
+                    </h2>
+                    <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+                        Filter by genre and click <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for summaries, line-by-line breakdowns, and exam tips.
+                    </p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="genre-filters" role="tablist">
+                    <button data-genre="All" class="genre-tab active px-4 py-2 rounded-xl text-sm font-semibold bg-burgundy-600 text-white shadow-sm transition-all">
+                        All Texts
+                    </button>
+                    <button data-genre="Poetry" class="genre-tab px-4 py-2 rounded-xl text-sm font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">
+                        Poetry
+                    </button>
+                    <button data-genre="Short Story" class="genre-tab px-4 py-2 rounded-xl text-sm font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">
+                        Short Stories
+                    </button>
+                    <button data-genre="Drama" class="genre-tab px-4 py-2 rounded-xl text-sm font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">
+                        Drama
+                    </button>
+                    <button data-genre="Novel" class="genre-tab px-4 py-2 rounded-xl text-sm font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">
+                        Novels
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards Grid (Populated via JavaScript) -->
+            <div id="syllabus-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamic Cards Inserted Here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LITERARY DEVICES & POETIC TERMS ==================== -->
+    <section id="devices" class="py-16 sm:py-24 bg-parchment-100/70 dark:bg-slate-900/60 border-y border-parchment-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400">Exam Toolkit</span>
+                    <h2 class="mt-2 font-serif font-bold text-3xl sm:text-4xl text-ink-900 dark:text-white">
+                        Literary Devices & Poetic Terms
+                    </h2>
+                    <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+                        Essential terminology needed to analyze unseen and prescribed poems in Paper I & II.
+                    </p>
+                </div>
+
+                <!-- Search Input -->
+                <div class="w-full md:w-72 relative">
+                    <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input 
+                        type="text" 
+                        id="device-search" 
+                        placeholder="Search devices (e.g., Irony)..." 
+                        class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-700 text-sm text-ink-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-burgundy-600"
+                    >
+                </div>
+            </div>
+
+            <!-- Devices Grid -->
+            <div id="devices-grid" class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Dynamic Device Cards Inserted Here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== O/L EXAM ANSWER WRITING GUIDE ==================== -->
+    <section id="exam-guide" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-burgundy-600 dark:text-amber-400">Exam Strategy</span>
+                <h2 class="mt-2 font-serif font-bold text-3xl sm:text-4xl text-ink-900 dark:text-white">
+                    How to Write High-Scoring O/L Answers
+                </h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Examiners look for clear textual evidence and analytical explanation rather than mere plot retelling. Use these two proven frameworks.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Guide 1: Context Questions -->
+                <div class="p-7 sm:p-9 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-700 dark:text-amber-400 flex items-center justify-center font-serif font-bold text-lg">I</span>
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">Mastering Context Questions</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Paper I &bull; Part A (Identifying Extracts)</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                        When given a short quote from a poem, short story, drama, or novel, ensure your answer covers these <strong>4 essential checkpoints</strong>:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-3.5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+                            <div>
+                                <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Title & Author</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">State the exact title of the work (in quotation marks or underlined) and the author's full name.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3.5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+                            <div>
+                                <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Speaker & Listener</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Identify who speaks these words and to whom (or whether it is the narrator's observation/inner thought).</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3.5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+                            <div>
+                                <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Immediate Situation</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Briefly explain what is happening at that exact moment in the plot.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3.5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">4</span>
+                            <div>
+                                <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Literary Significance</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Explain what the quote reveals about character, theme, tone, or poetic technique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 2: The P.E.E.L. Paragraph Method -->
+                <div class="p-7 sm:p-9 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-10 h-10 rounded-xl bg-burgundy-600/10 text-burgundy-600 dark:text-amber-400 flex items-center justify-center font-serif font-bold text-lg">II</span>
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">The P.E.E.L. Essay Method</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Paper II &bull; Literary Appreciation Essays</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                        Structure every body paragraph in your literature essays using <strong>P.E.E.L.</strong> to stay focused on the question:
+                    </p>
+
+                    <div class="space-y-3.5">
+                        <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
+                            <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">P — Point:</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Begin with a clear topic sentence answering the prompt directly.</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
+                            <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">E — Evidence:</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Embed a short, accurate quotation or specific textual detail.</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
+                            <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">E — Explanation:</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Analyze <em>how</em> the language, imagery, or action creates meaning.</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
+                            <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">L — Link:</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Connect your insight back to the main theme or essay question.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE SELF-CHECK QUIZ ==================== -->
+    <section id="quiz" class="py-16 sm:py-24 bg-parchment-100/70 dark:bg-slate-900/60 border-t border-parchment-200 dark:border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400">Revision Check</span>
+                <h2 class="mt-2 font-serif font-bold text-3xl sm:text-4xl text-ink-900 dark:text-white">
+                    O/L Literature Self-Check Quiz
+                </h2>
+                <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+                    Test your knowledge of prescribed texts, quotes, and poetic devices.
+                </p>
+            </div>
+
+            <!-- Quiz Card Container -->
+            <div class="p-6 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-lg">
+                <!-- Progress Header -->
+                <div id="quiz-header" class="flex items-center justify-between pb-5 mb-6 border-b border-parchment-200 dark:border-slate-800">
+                    <span id="quiz-progress-text" class="text-xs font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400">
+                        Question 1 of 5
+                    </span>
+                    <span id="quiz-score-badge" class="text-xs font-semibold px-3 py-1 rounded-full bg-parchment-100 dark:bg-slate-800 text-ink-800 dark:text-slate-200">
+                        Score: 0
+                    </span>
+                </div>
+
+                <!-- Active Question View -->
+                <div id="quiz-body">
+                    <h3 id="quiz-question" class="font-serif font-bold text-xl sm:text-2xl text-ink-900 dark:text-white leading-snug">
+                        Loading question...
+                    </h3>
+
+                    <div id="quiz-options" class="mt-6 space-y-3">
+                        <!-- Options injected here -->
+                    </div>
+
+                    <!-- Instant Explanation Box -->
+                    <div id="quiz-feedback" class="hidden mt-6 p-4 rounded-xl border text-sm leading-relaxed">
+                        <p id="quiz-feedback-title" class="font-bold mb-1"></p>
+                        <p id="quiz-feedback-text"></p>
+                    </div>
+
+                    <!-- Next Button -->
+                    <div class="mt-8 flex justify-end">
+                        <button id="quiz-next-btn" class="hidden px-6 py-3 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm transition-all items-center gap-2">
+                            <span>Next Question</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Final Summary View -->
+                <div id="quiz-results" class="hidden text-center py-6">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-2xl sm:text-3xl text-ink-900 dark:text-white">Quiz Complete!</h3>
+                    <p id="final-score-display" class="mt-2 text-lg font-semibold text-burgundy-600 dark:text-amber-400">
+                        You scored 0 out of 5
+                    </p>
+                    <p id="final-score-message" class="mt-3 text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
+                        Keep reviewing the study guides to sharpen your textual memory!
+                    </p>
+                    <button id="quiz-restart-btn" class="mt-8 px-6 py-3 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm transition-all inline-flex items-center gap-2">
+                        <i class="fas fa-rotate-right"></i>
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="py-12 bg-parchment-50 dark:bg-slate-950 border-t border-parchment-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="font-serif font-bold text-lg text-ink-900 dark:text-white">
+                    O/L English Literature Hub
+                </p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    "Literature adds to reality, it does not simply describe it." — C.S. Lewis
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-5 text-xs font-medium text-slate-600 dark:text-slate-400">
+                <a href="#syllabus" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Syllabus</a>
+                <a href="#devices" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Devices</a>
+                <a href="#exam-guide" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Exam Guide</a>
+                <a href="#quiz" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Quiz</a>
+                <a href="#top" class="text-burgundy-600 dark:text-amber-400 font-semibold">Back to Top &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== STUDY GUIDE MODAL ==================== -->
+    <div id="study-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-900/65 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="bg-parchment-50 dark:bg-slate-900 border border-parchment-200 dark:border-slate-700 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <!-- Modal Header -->
+            <div class="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 sm:px-8 bg-parchment-50/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-parchment-200 dark:border-slate-800">
+                <div>
+                    <span id="modal-genre-badge" class="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-burgundy-600/10 text-burgundy-600 dark:bg-amber-400/15 dark:text-amber-400 mb-2">
+                        Poetry
+                    </span>
+                    <h3 id="modal-title" class="font-serif font-bold text-2xl sm:text-3xl text-ink-900 dark:text-white">
+                        Text Title
+                    </h3>
+                    <p id="modal-author" class="text-sm font-medium text-slate-600 dark:text-slate-400 mt-0.5">
+                        by Author Name
+                    </p>
+                </div>
+                <button id="close-modal-btn" aria-label="Close Study Guide" class="p-2.5 rounded-xl bg-parchment-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-parchment-200 dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-times text-base"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 sm:p-8 space-y-6">
+                <!-- Summary -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+                        <i class="fas fa-align-left mr-1.5 text-burgundy-600 dark:text-amber-400"></i>Concise Overview
+                    </h4>
+                    <p id="modal-summary" class="text-sm sm:text-base text-ink-800 dark:text-slate-200 leading-relaxed">
+                        Summary goes here.
+                    </p>
+                </div>
+
+                <!-- Themes -->
+                <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-2">
+                        Key Themes & Motifs
+                    </h4>
+                    <ul id="modal-themes" class="flex flex-wrap gap-2 text-xs font-medium">
+                    </ul>
+                </div>
+
+                <!-- Stanza-by-Stanza / Line-by-Line Breakdown -->
+                <div id="modal-breakdown-wrapper" class="space-y-4">
+                    <h4 id="modal-analysis-title" class="text-xs font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400">
+                        <i class="fas fa-feather-pointed mr-1.5"></i>Complete Line-by-Line & Structural Analysis
+                    </h4>
+                    <div id="modal-breakdown" class="space-y-3">
+                    </div>
+                </div>
+
+                <!-- O/L Context Tip -->
+                <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 mb-2">
+                        <i class="fas fa-lightbulb mr-1.5"></i>O/L Exam Focus Tip
+                    </h4>
+                    <p id="modal-tip" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                        Exam tip.
+                    </p>
+                </div>
+
+                <!-- Optional PDF Resource Link Container -->
+                <div id="modal-pdf-container" class="hidden pt-4 border-t border-parchment-200 dark:border-slate-800 flex flex-wrap gap-3">
+                    <a id="modal-preview-btn" href="#" target="_blank" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold transition-all inline-flex items-center gap-2">
+                        <i class="fas fa-eye"></i> Preview Drive PDF
+                    </a>
+                    <a id="modal-download-btn" href="#" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold transition-all inline-flex items-center gap-2">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== APPLICATION LOGIC ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Sri Lankan G.C.E. O/L Anthology Data
+            const syllabusTexts = [
+                {
+                    id: "eagle",
+                    genre: "Poetry",
+                    title: "The Eagle",
+                    author: "Alfred, Lord Tennyson",
+                    themes: ["Power of Nature", "Majesty & Solitude", "Freedom"],
+                    summary: "A vivid six-line lyric capturing the regal stillness, towering perspective, and sudden, lethal speed of an eagle perched high above the sea.",
+                    analysisTitle: "Complete Line-by-Line Analysis (All 6 Lines)",
+                    breakdown: [
+                        {
+                            quote: "Line 1: \"He clasps the crag with crooked hands;\"",
+                            note: "Personification ('hands' instead of claws) gives the eagle human-like authority and firm grip. Harsh /k/ alliteration ('clasps', 'crag', 'crooked') mimics the jagged, rocky cliff and physical strength."
+                        },
+                        {
+                            quote: "Line 2: \"Close to the sun in lonely lands,\"",
+                            note: "Hyperbole ('Close to the sun') elevates the eagle to an almost mythical, supreme height above ordinary creatures. 'Lonely lands' emphasizes majestic isolation rather than sadness."
+                        },
+                        {
+                            quote: "Line 3: \"Ring'd with the azure world, he stands.\"",
+                            note: "Visual and colour imagery ('azure' = deep blue sky and sea) frames the bird at the very center of the universe like a crowned monarch."
+                        },
+                        {
+                            quote: "Line 4: \"The wrinkled sea beneath him crawls;\"",
+                            note: "Shift in perspective from sky to ocean. Personification and metaphor reduce massive ocean waves to tiny 'wrinkles' that 'crawl' slowly, highlighting the eagle's immense altitude."
+                        },
+                        {
+                            quote: "Line 5: \"He watches from his mountain walls,\"",
+                            note: "Metaphor ('mountain walls') turns the natural cliff into a royal fortress. 'Watches' conveys intense, patient vigilance as a predator surveying its kingdom."
+                        },
+                        {
+                            quote: "Line 6: \"And like a thunderbolt he falls.\"",
+                            note: "Climactic simile ('like a thunderbolt') shatters the calm stillness of the first five lines, capturing explosive speed, irresistible force, and deadly precision."
+                        }
+                    ],
+                    examTip: "Contrast the static, calm mood of Lines 1–5 with the sudden kinetic energy of Line 6. Mention the AAA BBB rhyme scheme and iambic tetrameter rhythm."
+                },
+                {
+                    id: "war-is-kind",
+                    genre: "Poetry",
+                    title: "War is Kind",
+                    author: "Stephen Crane",
+                    themes: ["Anti-War Satire", "Grief & Loss", "Deception of Glory"],
+                    summary: "A bitingly ironic anti-war poem contrasting the comforting lie that 'war is kind' against the brutal reality of dying soldiers and grieving loved ones.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    breakdown: [
+                        {
+                            quote: "Stanza 1 (Lines 1–5): \"Do not weep, maiden, for war is kind...\"",
+                            note: "Verbal irony anchors the refrain 'War is kind.' The lover's 'wild hands' show panic and agony, while the 'affrighted steed' running alone underscores sudden death on the battlefield."
+                        }
+                    ],
+                    examTip: "Notice the structural contrast between the three long, personal stanzas (addressed to maiden, babe, mother) and the two indented, marching stanzas critiquing military propaganda."
+                },
+                {
+                    id: "clowns-wife",
+                    genre: "Poetry",
+                    title: "The Clown's Wife",
+                    author: "Johnson Agard",
+                    themes: ["Appearance vs. Reality", "Hidden Sorrow", "Domestic Empathy"],
+                    summary: "Told through the dramatic monologue of a clown's wife, revealing the exhausting melancholy behind the painted smile of a public entertainer.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    breakdown: [
+                        {
+                            quote: "Stanza 1: \"About my husband you don't know / what I know...\"",
+                            note: "Dramatic monologue setup establishes an intimate, conversational tone. The wife draws a sharp boundary between the audience's superficial view and her private truth."
+                        }
+                    ],
+                    examTip: "Highlight the contrast between public mask and private vulnerability, and explain how the simple, colloquial diction makes the wife's voice authentic and deeply moving."
+                },
+                {
+                    id: "richard-cory",
+                    genre: "Poetry",
+                    title: "Richard Cory",
+                    author: "Edwin Arlington Robinson",
+                    themes: ["Illusion of Wealth", "Social Class Divide", "Hidden Despair"],
+                    summary: "Working-class townspeople idolize Richard Cory for his wealth, grace, and aristocratic charm—until his shocking suicide shatters their assumptions.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    breakdown: [
+                        {
+                            quote: "Stanza 1: \"Whenever Richard Cory went down town...\"",
+                            note: "First-person plural ('We people on the pavement') creates a collective working-class perspective. Royal diction ('crown', 'imperially') elevates Cory above ordinary citizens."
+                        }
+                    ],
+                    examTip: "Discuss how Robinson builds a steady, ballad-like rhythm in the first 15 lines so that the blunt, matter-of-fact final line lands with maximum psychological shock."
+                },
+                {
+                    id: "fear",
+                    genre: "Poetry",
+                    title: "Fear",
+                    author: "Gabriela Mistral",
+                    themes: ["Maternal Anxiety", "Growing Up", "Fear of Losing a Child"],
+                    summary: "A mother voices her tender yet anxious wish that her young daughter never grows up into a swallow, a princess, or a queen—fearing each transformation will take her away.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    breakdown: [
+                        {
+                            quote: "Stanza 1: \"I don't want them to turn / my little girl into a swallow...\"",
+                            note: "The 'swallow' symbolizes freedom, travel, and independence. The mother's humble 'straw bed' and intimate act of combing hair reflect simple, nurturing maternal closeness."
+                        }
+                    ],
+                    examTip: "Analyze the progression from swallow (freedom) to princess (wealth) to queen (power)—all things society prizes, yet the mother fears because they sever her intimate bond with her daughter."
+                },
+                {
+                    id: "once-upon-a-time",
+                    genre: "Poetry",
+                    title: "Once Upon a Time",
+                    author: "Gabriel Okara",
+                    themes: ["Loss of Innocence", "Social Hypocrisy", "Cultural Change"],
+                    summary: "A father laments to his young son how adults have replaced genuine warmth and sincerity with fake smiles and hollow social etiquette, asking to relearn childhood authenticity.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    breakdown: [
+                        {
+                            quote: "Stanza 1: \"Once upon a time, son, / they used to laugh with their hearts...\"",
+                            note: "Fairy-tale opening ('Once upon a time') frames sincerity as something lost in the distant past. Contrast between laughing 'with their hearts' vs. 'with their teeth' and 'ice-block-cold eyes' exposes mercenary hypocrisy."
+                        }
+                    ],
+                    examTip: "Focus on body imagery ('hearts', 'eyes', 'teeth', 'hands', 'faces') and how Okara contrasts past communal warmth with modern individualism and pretense."
+                },
+                {
+                    id: "camel-hump",
+                    genre: "Poetry",
+                    title: "The Camel's Hump",
+                    author: "Rudyard Kipling",
+                    themes: ["Idleness vs. Hard Work", "Humor & Moral Lesson", "Self-Discipline"],
+                    summary: "A playful, rhythmic cautionary poem warning both children and adults that laziness leads to a metaphorical 'Cameelious hump' that only hard work can cure.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    breakdown: [
+                        {
+                            quote: "Stanzas 1–2: \"The Camel's hump is an ugly lump...\"",
+                            note: "Humorous internal rhyme ('hump / lump') and playful stretched vowels create a lighthearted nursery-rhyme tone while introducing the metaphor of 'getting the hump'."
+                        }
+                    ],
+                    examTip: "Comment on Kipling's energetic rhythm, invented words, and how humor makes a didactic message enjoyable."
+                },
+                {
+                    id: "upside-down",
+                    genre: "Poetry",
+                    title: "Upside-Down",
+                    author: "Alexander Kushner",
+                    themes: ["Childhood Curiosity", "Eccentricity & Humor", "Unconventional Thinking"],
+                    summary: "A witty narrative poem about an absent-minded, eccentric man who sees the world literally upside-down, turning everyday routines into comic mishaps.",
+                    analysisTitle: "Complete Stanza-by-Stanza & Thematic Breakdown",
+                    breakdown: [
+                        {
+                            quote: "Opening Stanzas: The Upside-Down Perspective",
+                            note: "Introduces a protagonist whose perception is inverted—treating ceilings as floors and normal objects as puzzling wonders."
+                        }
+                    ],
+                    examTip: "Highlight how Kushner uses comic exaggeration, brisk rhythm, and visual absurdity to entertain young readers while celebrating creative curiosity."
+                },
+                {
+                    id: "lumber-room",
+                    genre: "Short Story",
+                    title: "The Lumber Room",
+                    author: "Saki (H. H. Munro)",
+                    themes: ["Childhood Imagination vs. Adult Hypocrisy", "Wit & Satire", "Punishment & Rebellion"],
+                    summary: "Outsmarting his strict, unimaginative aunt, young Nicholas turns a day of punishment into a magical adventure inside the forbidden lumber room.",
+                    analysisTitle: "Section-by-Section Narrative & Character Analysis",
+                    breakdown: [
+                        {
+                            quote: "Section 1: The Frog in the Bread-and-Milk",
+                            note: "Nicholas proves his aunt wrong by placing a garden frog into his bowl of bread-and-milk, exposing adult infallibility and stubbornness."
+                        },
+                        {
+                            quote: "Section 3: Inside the Forbidden Lumber Room",
+                            note: "Slipping away with the key, Nicholas unlocks the lumber room—a treasure trove of tapestries, brass candlesticks, and carved teapots."
+                        }
+                    ],
+                    previewUrl: "https://drive.google.com/file/d/1DBnDaJHne_GIzC9C5Dhpa0YxoxBqsabF/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=1DBnDaJHne_GIzC9C5Dhpa0YxoxBqsabF",
+                    examTip: "Contrast Nicholas's imaginative freedom with the Aunt's rigid, petty authoritarianism. Note Saki's satirical tone and ironic reversal at the end."
+                },
+                {
+                    id: "nightingale-rose",
+                    genre: "Short Story",
+                    title: "The Nightingale and the Rose",
+                    author: "Oscar Wilde",
+                    themes: ["True Love vs. Materialism", "Self-Sacrifice", "Cynicism"],
+                    summary: "A compassionate Nightingale gives her life's blood to create a red rose for a young Student, only for his beloved to reject it in favor of expensive jewels.",
+                    analysisTitle: "Section-by-Section Allegory & Symbolism Analysis",
+                    breakdown: [
+                        {
+                            quote: "Section 1: The Student's Lament & The Nightingale's Empathy",
+                            note: "The Student weeps because the Professor's daughter promised to dance with him only if he brings a red rose."
+                        },
+                        {
+                            quote: "Section 3: The Sacrifice",
+                            note: "Choosing love over life, the Nightingale presses her breast against the thorn, singing of love perfected by death as the crimson rose blooms."
+                        }
+                    ],
+                    previewUrl: "https://drive.google.com/file/d/1hRddw1YlmbggggHnOW_awCqUL-1-y-PM/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=1hRddw1YlmbggggHnOW_awCqUL-1-y-PM",
+                    examTip: "Discuss the contrast between the Nightingale's genuine, selfless devotion and the shallow materialism of both the Student and the Professor's daughter."
+                },
+                {
+                    id: "twilight-crane",
+                    genre: "Drama",
+                    title: "Twilight of a Crane",
+                    author: "Junji Kinoshita",
+                    themes: ["Greed vs. Selfless Love", "Broken Promises", "Innocence vs. Corruption"],
+                    summary: "Based on a Japanese folktale, Tsu weaves magical cloth from her own feathers out of love for her husband Yohyo, until his growing greed destroys their happiness.",
+                    analysisTitle: "Dramatic Progression & Character Breakdown",
+                    breakdown: [
+                        {
+                            quote: "Opening Scene: Warmth, Playfulness & Innocence",
+                            note: "Yohyo and Tsu share a simple, affectionate life playing with village children. Tsu speaks a pure, childlike language of love."
+                        },
+                        {
+                            quote: "Climax: The Broken Taboo",
+                            note: "Driven by greed and impatience, Yohyo peeks inside the weaving room—discovering his wife in her true crane form."
+                        }
+                    ],
+                    previewUrl: "https://drive.google.com/file/d/1f2MBCSM7BQgXPzgZkwrLasT7qcy495rM/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=1f2MBCSM7BQgXPzgZkwrLasT7qcy495rM",
+                    examTip: "Focus on the dramatic contrast between Tsu's spiritual devotion and the mercenary language of Sodo and Unzu."
+                },
+                {
+                    id: "the-bear",
+                    genre: "Drama",
+                    title: "The Bear",
+                    author: "Anton Chekhov",
+                    themes: ["Human Hypocrisy", "Love & Passion", "Farce & Satire"],
+                    summary: "A one-act comic farce in which a grieving widow and an aggressive debt-collector argue furiously—until their fiery confrontation unexpectedly turns into romance.",
+                    analysisTitle: "Dramatic Structure & Comic Techniques",
+                    breakdown: [
+                        {
+                            quote: "Exposition: Popova's Theatrical Mourning",
+                            note: "Seven months after her husband's death, Mrs. Popova locks herself indoors in black mourning clothes."
+                        }
+                    ],
+                    previewUrl: "https://drive.google.com/file/d/1JG3W7z-QojckWAekDTwkeDmFr1qUfrsR/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=1JG3W7z-QojckWAekDTwkeDmFr1qUfrsR",
+                    examTip: "Analyze Chekhov's use of farcical exaggeration, rapid mood swings, stage directions, and situational irony."
+                },
+                {
+                    id: "bringing-tony-home",
+                    genre: "Novel",
+                    title: "Bringing Tony Home",
+                    author: "Tissa Abeysekara",
+                    themes: ["Childhood Memory & Nostalgia", "Loyalty & Guilt", "Changing Sri Lankan Society"],
+                    summary: "A poignant autobiographical novella recounting a young boy's desperate journey across suburban Colombo to rescue his beloved dog Tony after his family moves.",
+                    analysisTitle: "Key Narrative Sections & Thematic Analysis",
+                    breakdown: [
+                        {
+                            quote: "Part 1: Childhood Bond & Economic Decline",
+                            note: "Set in 1950s Sri Lanka, the narrator's family faces financial hardship and must relocate, forcing them to leave Tony behind."
+                        }
+                    ],
+                    examTip: "Comment on the first-person retrospective narration, sensory details of 1950s Sri Lanka, and Tony as a symbol of unconditional loyalty."
+                },
+                {
+                    id: "prince-pauper",
+                    genre: "Novel",
+                    title: "The Prince and the Pauper",
+                    author: "Mark Twain",
+                    themes: ["Social Justice & Empathy", "Appearance vs. Reality", "Power & Responsibility"],
+                    summary: "Prince Edward Tudor and pauper Tom Canty swap clothes and identities in 16th-century London, teaching the future king firsthand compassion.",
+                    analysisTitle: "Plot Arcs & Social Critique Breakdown",
+                    breakdown: [
+                        {
+                            quote: "The Identity Swap at Westminster",
+                            note: "Born on the same day, Edward and Tom look identical. Switching clothes, Edward is thrown out of palace gates while Tom is mistaken for the heir."
+                        }
+                    ],
+                    examTip: "Focus on how clothing symbolizes arbitrary social class and how Edward's suffering equips him to become a humane monarch."
+                },
+                {
+                    id: "vendor-sweets",
+                    genre: "Novel",
+                    title: "The Vendor of Sweets",
+                    author: "R. K. Narayan",
+                    themes: ["Tradition vs. Modernity", "Generational Conflict", "Detachment & Self-Discovery"],
+                    summary: "Jagan, a Gandhian sweet-maker in Malgudi, struggles to understand his Westernized son Mali, ultimately choosing spiritual detachment over anxiety.",
+                    analysisTitle: "Character Arcs & Thematic Analysis",
+                    breakdown: [
+                        {
+                            quote: "Jagan's Gandhian Lifestyle & Secret Wealth",
+                            note: "Living simply in Malgudi, Jagan spins yarn and reads the Bhagavad Gita while managing his sweet shop profits."
+                        }
+                    ],
+                    examTip: "Analyze Narayan's gentle irony toward Jagan's contradictions and the contrast between Malgudi's traditions and Mali's modernity."
+                }
+            ];
+
+            // 2. Literary Devices Data
+            const literaryDevices = [
+                { name: "Irony (Verbal & Situational)", category: "Tone", definition: "A contrast between expectation and reality, or saying the opposite of what is meant.", example: "Repeating 'War is kind' in Stephen Crane's poem while describing gruesome battlefield deaths." },
+                { name: "Personification", category: "Imagery", definition: "Giving human qualities, emotions, or actions to animals, objects, or nature.", example: "'He clasps the crag with crooked hands' and 'The wrinkled sea beneath him crawls' (The Eagle)." },
+                { name: "Simile", category: "Comparison", definition: "Comparing two unlike things using 'like' or 'as'.", example: "'And like a thunderbolt he falls' (The Eagle) or 'like a deflated balloon' (The Clown's Wife)." },
+                { name: "Metaphor", category: "Comparison", definition: "A direct comparison stating one thing is another without 'like' or 'as'.", example: "'He watches from his mountain walls' (comparing cliffs to a royal fortress)." },
+                { name: "Hyperbole", category: "Emphasis", definition: "Deliberate exaggeration used for dramatic emphasis or humor.", example: "'Close to the sun in lonely lands' (The Eagle) and 'richer than a king' (Richard Cory)." },
+                { name: "Alliteration", category: "Sound", definition: "Repetition of initial consonant sounds in nearby words.", example: "'He clasps the crag with crooked hands' (harsh /k/ sounds)." },
+                { name: "Oxymoron", category: "Contrast", definition: "Combining two contradictory terms side by side.", example: "'Virtue of slaughter', 'excellence of killing', and 'bright splendid shroud' (War is Kind)." },
+                { name: "Dramatic Monologue", category: "Form", definition: "A poem written as a speech by a single fictional character revealing their inner thoughts.", example: "The wife speaking directly to the reader in 'The Clown's Wife'." },
+                { name: "Anaphora", category: "Repetition", definition: "Repetition of a word or phrase at the beginning of successive clauses or stanzas.", example: "'I don't want them to turn / my little girl into...' in Gabriela Mistral's 'Fear'." }
+            ];
+
+            // 3. Quiz Questions Data
+            const quizQuestions = [
+                {
+                    question: "1. In 'The Eagle', what literary device is used in 'And like a thunderbolt he falls'?",
+                    options: ["Metaphor", "Simile", "Oxymoron", "Alliteration"],
+                    correct: 1,
+                    explanation: "Using 'like' to compare the eagle's sudden dive to a thunderbolt is a simile."
+                },
+                {
+                    question: "2. What is the dominant literary technique throughout Stephen Crane's 'War is Kind'?",
+                    options: ["Verbal Irony", "Pastoral Romance", "Onomatopoeia", "Allegory"],
+                    correct: 0,
+                    explanation: "The repeated refrain 'War is kind' sharply contradicts the brutal realities of war depicted in each stanza."
+                },
+                {
+                    question: "3. In 'Richard Cory', what does the townspeople's reaction to Cory's death reveal?",
+                    options: ["They knew he was unhappy", "Wealth and status do not guarantee inner peace", "He lost all his money", "He moved away to another town"],
+                    correct: 1,
+                    explanation: "Despite seeming to have everything, Cory's suicide exposes the illusion that material wealth equals happiness."
+                },
+                {
+                    question: "4. In 'Once Upon a Time', what does the father ask his son to teach him?",
+                    options: ["How to earn more money", "How to laugh and smile sincerely again", "How to write poetry", "How to dress properly for the office"],
+                    correct: 1,
+                    explanation: "The father wants to unlearn adult hypocrisy and rediscover genuine childhood warmth."
+                },
+                {
+                    question: "5. In 'The Lumber Room', why does Nicholas pretend he wants to enter the gooseberry garden?",
+                    options: ["He loves gooseberries", "To distract his aunt so he can explore the lumber room", "His cousins dared him", "He lost his toy there"],
+                    correct: 1,
+                    explanation: "Nicholas cleverly tricks his aunt into guarding the garden while he slips into the forbidden lumber room."
+                }
+            ];
+
+            // ==================== THEME & NAVIGATION LOGIC ====================
+            const htmlEl = document.documentElement;
+            const bodyEl = document.getElementById('app-body');
+            const themeBtns = document.querySelectorAll('.theme-btn');
+
+            themeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const mode = btn.getAttribute('data-theme');
+                    htmlEl.classList.remove('dark');
+                    bodyEl.classList.remove('sepia-mode');
+
+                    if (mode === 'dark') {
+                        htmlEl.classList.add('dark');
+                    } else if (mode === 'sepia') {
+                        bodyEl.classList.add('sepia-mode');
+                    }
+
+                    themeBtns.forEach(b => b.classList.remove('bg-white', 'dark:bg-slate-700', 'text-ink-900', 'shadow-sm'));
+                    btn.classList.add('bg-white', 'text-ink-900', 'shadow-sm');
+                });
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // ==================== SYLLABUS RENDER & FILTER ====================
+            const syllabusGrid = document.getElementById('syllabus-grid');
+            const genreTabs = document.querySelectorAll('.genre-tab');
+
+            const renderSyllabus = (selectedGenre = 'All') => {
+                const filtered = selectedGenre === 'All'
+                    ? syllabusTexts
+                    : syllabusTexts.filter(item => item.genre === selectedGenre);
+
+                syllabusGrid.innerHTML = filtered.map(item => `
+                    <article class="flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-burgundy-600/10 text-burgundy-600 dark:bg-amber-400/15 dark:text-amber-400">
+                                    ${item.genre}
+                                </span>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">${item.title}</h3>
+                            <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5 mb-3">by ${item.author}</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                ${item.summary}
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                ${item.themes.map(th => `
+                                    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-parchment-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                        ${th}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <button onclick="openStudyModal('${item.id}')" class="w-full py-2.5 px-4 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                            <i class="fas fa-book-open text-xs"></i>
+                            Read Study Guide
+                        </button>
+                    </article>
+                `).join('');
+            };
+
+            genreTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    genreTabs.forEach(t => {
+                        t.classList.remove('bg-burgundy-600', 'text-white', 'font-semibold', 'shadow-sm');
+                        t.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-parchment-200', 'dark:border-slate-700');
+                    });
+                    tab.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-parchment-200', 'dark:border-slate-700');
+                    tab.classList.add('bg-burgundy-600', 'text-white', 'font-semibold', 'shadow-sm');
+
+                    renderSyllabus(tab.getAttribute('data-genre'));
+                });
+            });
+
+            renderSyllabus('All');
+
+            // ==================== STUDY GUIDE MODAL LOGIC ====================
+            const modal = document.getElementById('study-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            window.openStudyModal = (textId) => {
+                const item = syllabusTexts.find(t => t.id === textId);
+                if (!item) return;
+
+                document.getElementById('modal-genre-badge').textContent = item.genre;
+                document.getElementById('modal-title').textContent = item.title;
+                document.getElementById('modal-author').textContent = `by ${item.author}`;
+                document.getElementById('modal-summary').textContent = item.summary;
+                document.getElementById('modal-analysis-title').innerHTML = `<i class="fas fa-feather-pointed mr-1.5"></i>${item.analysisTitle}`;
+                document.getElementById('modal-tip').textContent = item.examTip;
+
+                // Handle Drive PDF Links visibility
+                const pdfContainer = document.getElementById('modal-pdf-container');
+                const previewBtn = document.getElementById('modal-preview-btn');
+                const downloadBtn = document.getElementById('modal-download-btn');
+
+                if (item.previewUrl && item.downloadUrl) {
+                    previewBtn.href = item.previewUrl;
+                    downloadBtn.href = item.downloadUrl;
+                    pdfContainer.classList.remove('hidden');
+                    pdfContainer.classList.add('flex');
+                } else {
+                    pdfContainer.classList.add('hidden');
+                    pdfContainer.classList.remove('flex');
+                }
+
+                const themesList = document.getElementById('modal-themes');
+                themesList.innerHTML = item.themes.map(th => `
+                    <li class="px-3 py-1 rounded-full bg-parchment-100 dark:bg-slate-700 text-ink-800 dark:text-slate-200">
+                        ${th}
+                    </li>
+                `).join('');
+
+                const breakdownContainer = document.getElementById('modal-breakdown');
+                breakdownContainer.innerHTML = item.breakdown.map(entry => `
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
+                        <div class="pl-3 border-l-2 border-burgundy-600 dark:border-amber-400">
+                            <p class="font-serif italic font-semibold text-sm text-burgundy-700 dark:text-amber-300">
+                                ${entry.quote}
+                            </p>
+                            <p class="mt-1.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                                ${entry.note}
+                            </p>
+                        </div>
+                    </div>
+                `).join('');
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            };
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+            });
+
+            // ==================== LITERARY DEVICES RENDER & SEARCH ====================
+            const devicesGrid = document.getElementById('devices-grid');
+            const deviceSearch = document.getElementById('device-search');
+
+            const renderDevices = (query = '') => {
+                const q = query.toLowerCase().trim();
+                const filtered = literaryDevices.filter(d =>
+                    d.name.toLowerCase().includes(q) ||
+                    d.definition.toLowerCase().includes(q) ||
+                    d.category.toLowerCase().includes(q) ||
+                    d.example.toLowerCase().includes(q)
+                );
+
+                if (filtered.length === 0) {
+                    devicesGrid.innerHTML = `
+                        <div class="col-span-full text-center py-10 text-slate-500 dark:text-slate-400">
+                            No literary devices found matching "${query}".
+                        </div>
+                    `;
+                    return;
+                }
+
+                devicesGrid.innerHTML = filtered.map(device => `
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif font-bold text-lg text-ink-900 dark:text-white">${device.name}</h3>
+                            <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-amber-500/15 text-amber-800 dark:text-amber-300">
+                                ${device.category}
+                            </span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            ${device.definition}
+                        </p>
+                        <div class="mt-3 pt-3 border-t border-parchment-100 dark:border-slate-800 text-xs italic text-slate-500 dark:text-slate-400">
+                            <strong>Example:</strong> ${device.example}
+                        </div>
+                    </div>
+                `).join('');
+            };
+
+            deviceSearch.addEventListener('input', (e) => renderDevices(e.target.value));
+            renderDevices();
+
+            // ==================== INTERACTIVE QUIZ LOGIC ====================
+            let currentQIndex = 0;
+            let score = 0;
+            let answered = false;
+
+            const qProgressText = document.getElementById('quiz-progress-text');
+            const qScoreBadge = document.getElementById('quiz-score-badge');
+            const qTitle = document.getElementById('quiz-question');
+            const qOptions = document.getElementById('quiz-options');
+            const qFeedback = document.getElementById('quiz-feedback');
+            const qFeedbackTitle = document.getElementById('quiz-feedback-title');
+            const qFeedbackText = document.getElementById('quiz-feedback-text');
+            const qNextBtn = document.getElementById('quiz-next-btn');
+            const quizBody = document.getElementById('quiz-body');
+            const quizHeader = document.getElementById('quiz-header');
+            const quizResults = document.getElementById('quiz-results');
+
+            const loadQuestion = () => {
+                answered = false;
+                const q = quizQuestions[currentQIndex];
+                qProgressText.textContent = `Question ${currentQIndex + 1} of ${quizQuestions.length}`;
+                qScoreBadge.textContent = `Score: ${score}`;
+                qTitle.textContent = q.question;
+                qFeedback.classList.add('hidden');
+                qNextBtn.classList.add('hidden');
+                qNextBtn.classList.remove('inline-flex');
+
+                qOptions.innerHTML = q.options.map((opt, idx) => `
+                    <button 
+                        data-index="${idx}"
+                        class="quiz-opt-btn w-full text-left p-4 rounded-xl border border-parchment-200 dark:border-slate-700 bg-parchment-50/60 dark:bg-slate-800/50 hover:border-burgundy-600 dark:hover:border-amber-400 text-sm font-medium text-ink-900 dark:text-slate-100 transition-all flex items-center gap-3"
+                    >
+                        <span class="w-7 h-7 rounded-lg bg-white dark:bg-slate-700 border border-parchment-200 dark:border-slate-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                            ${String.fromCharCode(65 + idx)}
+                        </span>
+                        <span>${opt}</span>
+                    </button>
+                `).join('');
+
+                document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+                    btn.addEventListener('click', () => handleOptionSelect(parseInt(btn.getAttribute('data-index'))));
+                });
+            };
+
+            const handleOptionSelect = (selectedIndex) => {
+                if (answered) return;
+                answered = true;
+
+                const q = quizQuestions[currentQIndex];
+                const allBtns = document.querySelectorAll('.quiz-opt-btn');
+                const isCorrect = selectedIndex === q.correct;
+
+                if (isCorrect) {
+                    score++;
+                    qScoreBadge.textContent = `Score: ${score}`;
+                }
+
+                allBtns.forEach((btn, idx) => {
+                    btn.disabled = true;
+                    if (idx === q.correct) {
+                        btn.classList.remove('border-parchment-200', 'dark:border-slate-700');
+                        btn.classList.add('bg-emerald-500/15', 'border-emerald-600', 'text-emerald-900', 'dark:text-emerald-200');
+                    } else if (idx === selectedIndex && !isCorrect) {
+                        btn.classList.remove('border-parchment-200', 'dark:border-slate-700');
+                        btn.classList.add('bg-rose-500/15', 'border-rose-600', 'text-rose-900', 'dark:text-rose-200');
+                    }
+                });
+
+                qFeedback.classList.remove('hidden', 'bg-emerald-500/10', 'border-emerald-500/30', 'text-emerald-900', 'dark:text-emerald-200', 'bg-rose-500/10', 'border-rose-500/30', 'text-rose-900', 'dark:text-rose-200');
+                if (isCorrect) {
+                    qFeedback.classList.add('bg-emerald-500/10', 'border-emerald-500/30', 'text-emerald-900', 'dark:text-emerald-200');
+                    qFeedbackTitle.textContent = 'Correct!';
+                } else {
+                    qFeedback.classList.add('bg-rose-500/10', 'border-rose-500/30', 'text-rose-900', 'dark:text-rose-200');
+                    qFeedbackTitle.textContent = 'Not quite!';
+                }
+                qFeedbackText.textContent = q.explanation;
+
+                qNextBtn.querySelector('span').textContent = currentQIndex === quizQuestions.length - 1 ? 'See Results' : 'Next Question';
+                qNextBtn.classList.remove('hidden');
+                qNextBtn.classList.add('inline-flex');
+            };
+
+            qNextBtn.addEventListener('click', () => {
+                currentQIndex++;
+                if (currentQIndex < quizQuestions.length) {
+                    loadQuestion();
+                } else {
+                    quizBody.classList.add('hidden');
+                    quizHeader.classList.add('hidden');
+                    quizResults.classList.remove('hidden');
+                    document.getElementById('final-score-display').textContent = `You scored ${score} out of ${quizQuestions.length}`;
+                    document.getElementById('final-score-message').textContent =
+                        score >= 4 ? 'Excellent command of the O/L Literature syllabus! Keep up the great revision.' :
+                        score >= 3 ? 'Good effort! Review the study guides above to strengthen your analysis.' :
+                        'A great start—explore the anthology cards and literary devices above, then try again!';
+                }
+            });
+
+            document.getElementById('quiz-restart-btn').addEventListener('click', () => {
+                currentQIndex = 0;
+                score = 0;
+                quizResults.classList.add('hidden');
+                quizBody.classList.remove('hidden');
+                quizHeader.classList.remove('hidden');
+                loadQuestion();
+            });
+
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>
