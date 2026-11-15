@@ -175,7 +175,7 @@
                         Prescribed Literary Texts
                     </h2>
                     <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                        Filter by genre and click <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for summaries, line-by-line breakdowns, and exam tips.
+                        Filter by genre and click <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for summaries, stanza breakdowns, and exam tips.
                     </p>
                 </div>
 
@@ -505,7 +505,7 @@
     <!-- ==================== APPLICATION LOGIC ==================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Sri Lankan G.C.E. O/L Anthology Data
+            // 1. Sri Lankan G.C.E. O/L Anthology Data with Complete Stanza/Line Breakdowns
             const syllabusTexts = [
                 {
                     id: "eagle",
@@ -550,14 +550,30 @@
                     author: "Stephen Crane",
                     themes: ["Anti-War Satire", "Grief & Loss", "Deception of Glory"],
                     summary: "A bitingly ironic anti-war poem contrasting the comforting lie that 'war is kind' against the brutal reality of dying soldiers and grieving loved ones.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
-                            quote: "Stanza 1 (Lines 1–5): \"Do not weep, maiden, for war is kind...\"",
+                            quote: "Stanza 1: \"Do not weep, maiden, for war is kind...\"",
                             note: "Verbal irony anchors the refrain 'War is kind.' The lover's 'wild hands' show panic and agony, while the 'affrighted steed' running alone underscores sudden death on the battlefield."
+                        },
+                        {
+                            quote: "Stanza 2: \"Hoarse, booming drums of the regiment...\"",
+                            note: "Auditory imagery ('Hoarse, booming drums') represents military propaganda. 'Unexplained glory' exposes how soldiers are conditioned for an abstract ideal ending in corpses."
+                        },
+                        {
+                            quote: "Stanza 3: \"Do not weep, babe, for war is kind...\"",
+                            note: "Addressing an innocent infant heightens pathos. Graphic verbs ('tumbled', 'raged', 'gulped') strip away romantic heroism and depict trench suffocation."
+                        },
+                        {
+                            quote: "Stanza 4: \"Swift blazing flag of the regiment...\"",
+                            note: "Visual symbolism critiques patriotic emblems. Oxymorons like 'virtue of slaughter' and 'excellence of killing' expose moral hypocrisy."
+                        },
+                        {
+                            quote: "Stanza 5: \"Mother whose heart hung humble as a button...\"",
+                            note: "Simile ('humble as a button') captures a mother's quiet, crushed grief, while the oxymoron 'bright splendid shroud' contrasts funeral pomp with tragic waste."
                         }
                     ],
-                    examTip: "Notice the structural contrast between the three long, personal stanzas (addressed to maiden, babe, mother) and the two indented, marching stanzas critiquing military propaganda."
+                    examTip: "Notice the structural contrast between the three long, personal stanzas (addressed to maiden, babe, mother) and the two indented marching stanzas critiquing military propaganda."
                 },
                 {
                     id: "clowns-wife",
@@ -566,14 +582,30 @@
                     author: "Johnson Agard",
                     themes: ["Appearance vs. Reality", "Hidden Sorrow", "Domestic Empathy"],
                     summary: "Told through the dramatic monologue of a clown's wife, revealing the exhausting melancholy behind the painted smile of a public entertainer.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
                             quote: "Stanza 1: \"About my husband you don't know / what I know...\"",
                             note: "Dramatic monologue setup establishes an intimate, conversational tone. The wife draws a sharp boundary between the audience's superficial view and her private truth."
+                        },
+                        {
+                            quote: "Stanza 2: \"He's the king of the clowning world...\"",
+                            note: "Visual symbols of comedy ('red nose', 'funny clothes') highlight his public success and the costume he hides behind."
+                        },
+                        {
+                            quote: "Stanza 3: \"But when he comes home / he's like a deflated balloon...\"",
+                            note: "Powerful simile ('like a deflated balloon') captures complete physical and emotional exhaustion once applause stops."
+                        },
+                        {
+                            quote: "Stanza 4: \"He doesn't say a word / he doesn't crack a joke...\"",
+                            note: "Repetition ('doesn't', 'sighs and sighs') emphasizes heavy silence and emotional burnout—a stark reversal of his stage persona."
+                        },
+                        {
+                            quote: "Stanza 5: \"So I put on my best smile... Life is no laughing matter, my love.\"",
+                            note: "Role reversal and poignant irony: the wife performs cheerfulness to comfort the comedian. The closing aphorism summarizes the tragic duality of life."
                         }
                     ],
-                    examTip: "Highlight the contrast between public mask and private vulnerability, and explain how the simple, colloquial diction makes the wife's voice authentic and deeply moving."
+                    examTip: "Highlight the contrast between public mask and private vulnerability, and explain how simple, colloquial diction makes the wife's voice authentic."
                 },
                 {
                     id: "richard-cory",
@@ -582,14 +614,26 @@
                     author: "Edwin Arlington Robinson",
                     themes: ["Illusion of Wealth", "Social Class Divide", "Hidden Despair"],
                     summary: "Working-class townspeople idolize Richard Cory for his wealth, grace, and aristocratic charm—until his shocking suicide shatters their assumptions.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
                             quote: "Stanza 1: \"Whenever Richard Cory went down town...\"",
-                            note: "First-person plural ('We people on the pavement') creates a collective working-class perspective. Royal diction ('crown', 'imperially') elevates Cory above ordinary citizens."
+                            note: "First-person plural ('We people on the pavement') creates a collective working-class perspective. Royal diction elevates Cory above ordinary citizens."
+                        },
+                        {
+                            quote: "Stanza 2: \"And he was always quietly arrayed...\"",
+                            note: "Diction like 'fluttered pulses' and 'glittered' shows the townspeople's star-struck admiration for his every gesture."
+                        },
+                        {
+                            quote: "Stanza 3: \"And he was rich—yes, richer than a king...\"",
+                            note: "Hyperbole ('richer than a king') and 'we thought' reveal the townspeople's envy and naive assumption that wealth guarantees happiness."
+                        },
+                        {
+                            quote: "Stanza 4: \"So on we worked, and waited for the light...\"",
+                            note: "Dramatic situational irony. While the poor struggle with hunger yet endure, Cory ends his life on a calm summer night—proving wealth cannot cure despair."
                         }
                     ],
-                    examTip: "Discuss how Robinson builds a steady, ballad-like rhythm in the first 15 lines so that the blunt, matter-of-fact final line lands with maximum psychological shock."
+                    examTip: "Discuss how Robinson builds a steady ballad-like rhythm in the first 15 lines so that the blunt final line lands with maximum psychological shock."
                 },
                 {
                     id: "fear",
@@ -598,14 +642,22 @@
                     author: "Gabriela Mistral",
                     themes: ["Maternal Anxiety", "Growing Up", "Fear of Losing a Child"],
                     summary: "A mother voices her tender yet anxious wish that her young daughter never grows up into a swallow, a princess, or a queen—fearing each transformation will take her away.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
                             quote: "Stanza 1: \"I don't want them to turn / my little girl into a swallow...\"",
-                            note: "The 'swallow' symbolizes freedom, travel, and independence. The mother's humble 'straw bed' and intimate act of combing hair reflect simple, nurturing maternal closeness."
+                            note: "The 'swallow' symbolizes freedom and travel. The mother's humble 'straw bed' and act of combing hair reflect simple, nurturing maternal closeness."
+                        },
+                        {
+                            quote: "Stanza 2: \"I don't want them to make / my little girl a princess...\"",
+                            note: "The 'princess' and 'golden slippers' symbolize social status and luxury, which the mother sees as restrictive and emotionally distancing."
+                        },
+                        {
+                            quote: "Stanza 3: \"And even less do I want them / one day to make her queen...\"",
+                            note: "Climactic escalation to a 'throne', representing supreme power and ultimate separation, preventing the mother from comforting her child at night."
                         }
                     ],
-                    examTip: "Analyze the progression from swallow (freedom) to princess (wealth) to queen (power)—all things society prizes, yet the mother fears because they sever her intimate bond with her daughter."
+                    examTip: "Analyze the progression from swallow (freedom) to princess (wealth) to queen (power)—all things society prizes, yet the mother fears because they sever her bond."
                 },
                 {
                     id: "once-upon-a-time",
@@ -614,14 +666,22 @@
                     author: "Gabriel Okara",
                     themes: ["Loss of Innocence", "Social Hypocrisy", "Cultural Change"],
                     summary: "A father laments to his young son how adults have replaced genuine warmth and sincerity with fake smiles and hollow social etiquette, asking to relearn childhood authenticity.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
-                            quote: "Stanza 1: \"Once upon a time, son, / they used to laugh with their hearts...\"",
-                            note: "Fairy-tale opening ('Once upon a time') frames sincerity as something lost in the distant past. Contrast between laughing 'with their hearts' vs. 'with their teeth' and 'ice-block-cold eyes' exposes mercenary hypocrisy."
+                            quote: "Stanzas 1–2: \"Once upon a time, son, they used to laugh with their hearts...\"",
+                            note: "Fairy-tale opening frames sincerity as something lost. Contrast between laughing 'with their hearts' vs. 'with their teeth' exposes mercenary hypocrisy."
+                        },
+                        {
+                            quote: "Stanzas 3–4: \"So I have learned many things, son. / I have learned to wear many faces...\"",
+                            note: "Extended simile comparing social personas to 'dresses' and a 'fixed portrait smile' illustrates the loss of true selfhood under modern conformity."
+                        },
+                        {
+                            quote: "Stanzas 5–7: \"So show me, son, / how to laugh; show me how / I used to laugh and smile...\"",
+                            note: "Role reversal: the adult asks the child to become his teacher, ending with a hopeful plea for emotional rebirth."
                         }
                     ],
-                    examTip: "Focus on body imagery ('hearts', 'eyes', 'teeth', 'hands', 'faces') and how Okara contrasts past communal warmth with modern individualism and pretense."
+                    examTip: "Focus on body imagery ('hearts', 'eyes', 'teeth', 'hands', 'faces') and how Okara contrasts past communal warmth with modern individualism."
                 },
                 {
                     id: "camel-hump",
@@ -630,11 +690,19 @@
                     author: "Rudyard Kipling",
                     themes: ["Idleness vs. Hard Work", "Humor & Moral Lesson", "Self-Discipline"],
                     summary: "A playful, rhythmic cautionary poem warning both children and adults that laziness leads to a metaphorical 'Cameelious hump' that only hard work can cure.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Line-by-Line Analysis",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
-                            quote: "Stanzas 1–2: \"The Camel's hump is an ugly lump...\"",
-                            note: "Humorous internal rhyme ('hump / lump') and playful stretched vowels create a lighthearted nursery-rhyme tone while introducing the metaphor of 'getting the hump'."
+                            quote: "Stanzas 1–2: \"The Camel's hump is an ugly lump / Which well you may see at the Zoo...\"",
+                            note: "Humorous internal rhyme and playful stretched vowels create a lighthearted nursery-rhyme tone while introducing the metaphor of laziness."
+                        },
+                        {
+                            quote: "Stanzas 3–4: \"We climb out of bed with a frouzly head / And a snarly-yarly voice...\"",
+                            note: "Onomatopoeia and vivid adjectives humorously depict the cranky mood of someone refusing to get active."
+                        },
+                        {
+                            quote: "Stanzas 5–6: \"The cure for this ill is not to sit still... But to take a large hoe and a shovel also...\"",
+                            note: "Practical prescription: physical labor replaces sluggishness with healthy energy, restoring harmony with nature."
                         }
                     ],
                     examTip: "Comment on Kipling's energetic rhythm, invented words, and how humor makes a didactic message enjoyable."
@@ -646,14 +714,22 @@
                     author: "Alexander Kushner",
                     themes: ["Childhood Curiosity", "Eccentricity & Humor", "Unconventional Thinking"],
                     summary: "A witty narrative poem about an absent-minded, eccentric man who sees the world literally upside-down, turning everyday routines into comic mishaps.",
-                    analysisTitle: "Complete Stanza-by-Stanza & Thematic Breakdown",
+                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
                         {
                             quote: "Opening Stanzas: The Upside-Down Perspective",
-                            note: "Introduces a protagonist whose perception is inverted—treating ceilings as floors and normal objects as puzzling wonders."
+                            note: "Introduces a protagonist whose perception is inverted—treating ceilings as floors and normal objects as puzzling wonders with deadpan seriousness."
+                        },
+                        {
+                            quote: "Middle Stanzas: Everyday Misunderstandings",
+                            note: "Ordinary tasks become absurd adventures because he refuses to conform to conventional spatial logic."
+                        },
+                        {
+                            quote: "Closing Stanzas: The Value of a Different Viewpoint",
+                            note: "Beneath slapstick humor lies a celebration of imagination: looking at life from an upside-down angle refreshes our sense of wonder."
                         }
                     ],
-                    examTip: "Highlight how Kushner uses comic exaggeration, brisk rhythm, and visual absurdity to entertain young readers while celebrating creative curiosity."
+                    examTip: "Highlight how Kushner uses comic exaggeration, brisk rhythm, and visual absurdity to entertain readers while celebrating creative curiosity."
                 },
                 {
                     id: "lumber-room",
