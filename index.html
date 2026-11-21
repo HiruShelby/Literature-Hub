@@ -73,7 +73,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 md:h-20">
                 <!-- Brand Title -->
-                <a href="#top" class="flex items-center gap-3 group">
+                <a href="#top" data-open-tab="syllabus" class="flex items-center gap-3 group">
                     <div class="w-10 h-10 rounded-xl bg-burgundy-600 text-white flex items-center justify-center shadow-sm group-hover:bg-burgundy-700 transition-colors">
                         <i class="fas fa-feather-pointed text-lg"></i>
                     </div>
@@ -87,12 +87,11 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Desktop Navigation Links (Switch Tabs) -->
                 <nav class="hidden md:flex items-center gap-7">
-                    <a href="#syllabus" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Anthology Texts</a>
-                    <a href="#devices" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Literary Devices</a>
-                    <a href="#exam-guide" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Answer Writing</a>
-                    <a href="#quiz" class="text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Practice Quiz</a>
+                    <a href="#syllabus" data-open-tab="syllabus" class="nav-tab-link text-sm font-semibold text-burgundy-600 dark:text-amber-400 transition-colors">Anthology Texts</a>
+                    <a href="#devices" data-open-tab="devices" class="nav-tab-link text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Literary Devices</a>
+                    <a href="#exam-guide" data-open-tab="exam-guide" class="nav-tab-link text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Answer Writing</a>
                 </nav>
 
                 <!-- Reading Mode Switcher & Mobile Menu -->
@@ -123,15 +122,14 @@
 
         <!-- Mobile Dropdown Drawer -->
         <div id="mobile-menu" class="hidden md:hidden bg-parchment-50 dark:bg-slate-900 border-b border-parchment-200 dark:border-slate-800 px-4 pt-2 pb-5 space-y-1.5 shadow-lg">
-            <a href="#syllabus" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">1. Anthology Study Guides</a>
-            <a href="#devices" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">2. Literary Devices Cheat-Sheet</a>
-            <a href="#exam-guide" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">3. Exam Answer Writing (PEEL)</a>
-            <a href="#quiz" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-burgundy-600 dark:text-amber-400 bg-burgundy-50 dark:bg-slate-800/80">4. Self-Check Practice Quiz</a>
+            <a href="#syllabus" data-open-tab="syllabus" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">1. Anthology Study Guides</a>
+            <a href="#devices" data-open-tab="devices" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">2. Literary Devices Cheat-Sheet</a>
+            <a href="#exam-guide" data-open-tab="exam-guide" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">3. Exam Answer Writing (PEEL)</a>
         </div>
     </header>
 
     <!-- ==================== HERO SECTION ==================== -->
-    <section id="top" class="relative py-16 sm:py-24 overflow-hidden border-b border-parchment-200/80 dark:border-slate-800">
+    <section id="top" class="relative py-14 sm:py-20 overflow-hidden border-b border-parchment-200/80 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold tracking-wide uppercase mb-6">
                 <i class="fas fa-graduation-cap"></i>
@@ -143,29 +141,49 @@
             </h1>
 
             <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Your complete study companion for the Sri Lankan G.C.E. O/L Literature syllabus. Explore exhaustive stanza-by-stanza poem analyses, full plot overviews for short stories, dramas, and novels, alongside Google Drive PDF resources.
+                Your complete study companion for the Sri Lankan G.C.E. O/L Literature syllabus. Switch between tabs to explore poem and prose breakdowns, literary devices, and essay frameworks.
             </p>
 
-            <!-- Quick-Jump Action Buttons -->
+            <!-- Quick-Jump Tab Buttons -->
             <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-                <a href="#syllabus" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm shadow-md shadow-burgundy-600/20 transition-all flex items-center justify-center gap-2">
+                <button type="button" data-open-tab="syllabus" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm shadow-md shadow-burgundy-600/20 transition-all flex items-center justify-center gap-2">
                     <i class="fas fa-book"></i>
                     Explore All Syllabus Texts
-                </a>
-                <a href="#devices" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
+                </button>
+                <button type="button" data-open-tab="devices" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
                     <i class="fas fa-sparkles text-amber-600"></i>
                     Literary Devices
-                </a>
-                <a href="#quiz" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
-                    <i class="fas fa-pen-to-square text-burgundy-600 dark:text-amber-400"></i>
-                    Take Practice Quiz
-                </a>
+                </button>
+                <button type="button" data-open-tab="exam-guide" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-file-lines text-burgundy-600 dark:text-amber-400"></i>
+                    Answer Writing Guide
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- ==================== INTERACTIVE SYLLABUS EXPLORER ==================== -->
-    <section id="syllabus" class="py-16 sm:py-24">
+    <!-- ==================== MAIN TAB BAR ==================== -->
+    <div id="workspace-tabs" class="bg-parchment-100/80 dark:bg-slate-900/70 border-b border-parchment-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-wrap gap-2.5" role="tablist" aria-label="Study Sections">
+                <button type="button" role="tab" aria-selected="true" data-tab="syllabus" class="section-tab active px-4 py-2.5 rounded-xl text-sm font-semibold bg-burgundy-600 text-white shadow-sm transition-all inline-flex items-center gap-2">
+                    <i class="fas fa-book-open text-xs"></i>
+                    <span>Anthology Texts</span>
+                </button>
+                <button type="button" role="tab" aria-selected="false" data-tab="devices" class="section-tab px-4 py-2.5 rounded-xl text-sm font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all inline-flex items-center gap-2">
+                    <i class="fas fa-sparkles text-xs text-amber-600"></i>
+                    <span>Literary Devices</span>
+                </button>
+                <button type="button" role="tab" aria-selected="false" data-tab="exam-guide" class="section-tab px-4 py-2.5 rounded-xl text-sm font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all inline-flex items-center gap-2">
+                    <i class="fas fa-file-lines text-xs text-burgundy-600 dark:text-amber-400"></i>
+                    <span>Answer Writing</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TAB 1: INTERACTIVE SYLLABUS EXPLORER ==================== -->
+    <section id="syllabus" data-tab-panel="syllabus" class="tab-panel py-14 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Heading & Genre Filter Tabs -->
             <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-parchment-200 dark:border-slate-800">
@@ -175,11 +193,11 @@
                         Prescribed Literary Texts & Full Overviews
                     </h2>
                     <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                        Filter by genre and click <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for complete stanzas, narrative breakdowns, and exam tips.
+                        Filter by genre (and anthology poetry sections like <strong>Nature</strong>, <strong>Conflict</strong>, <strong>Society</strong>, <strong>Life</strong>, and <strong>Humour</strong>) and click <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for deep analysis.
                     </p>
                 </div>
 
-                <!-- Filter Tabs -->
+                <!-- Genre Filter Tabs -->
                 <div class="flex flex-wrap gap-2" id="genre-filters" role="tablist">
                     <button data-genre="All" class="genre-tab active px-4 py-2 rounded-xl text-sm font-semibold bg-burgundy-600 text-white shadow-sm transition-all">
                         All Texts
@@ -199,6 +217,21 @@
                 </div>
             </div>
 
+            <!-- Poetry Anthology Sub-Section Filter Bar -->
+            <div id="poetry-section-bar" class="hidden mt-6 p-4 rounded-2xl bg-parchment-100/80 dark:bg-slate-900/70 border border-parchment-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-burgundy-700 dark:text-amber-400">
+                    <i class="fas fa-feather mr-1.5"></i>Anthology Poetry Sections:
+                </span>
+                <div id="poetry-section-pills" class="flex flex-wrap gap-2">
+                    <button type="button" data-poetry-section="All" class="poetry-sec-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-burgundy-600 text-white transition-all">All Sections</button>
+                    <button type="button" data-poetry-section="Nature" class="poetry-sec-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">Nature</button>
+                    <button type="button" data-poetry-section="Conflict" class="poetry-sec-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">Conflict</button>
+                    <button type="button" data-poetry-section="Society" class="poetry-sec-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">Society</button>
+                    <button type="button" data-poetry-section="Life" class="poetry-sec-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">Life</button>
+                    <button type="button" data-poetry-section="Humour" class="poetry-sec-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-parchment-200 dark:border-slate-700 hover:border-burgundy-600 transition-all">Humour</button>
+                </div>
+            </div>
+
             <!-- Cards Grid (Populated via JavaScript) -->
             <div id="syllabus-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Dynamic Cards Inserted Here -->
@@ -206,8 +239,8 @@
         </div>
     </section>
 
-    <!-- ==================== LITERARY DEVICES & POETIC TERMS ==================== -->
-    <section id="devices" class="py-16 sm:py-24 bg-parchment-100/70 dark:bg-slate-900/60 border-y border-parchment-200 dark:border-slate-800">
+    <!-- ==================== TAB 2: LITERARY DEVICES & POETIC TERMS ==================== -->
+    <section id="devices" data-tab-panel="devices" class="tab-panel hidden py-14 sm:py-20 bg-parchment-100/70 dark:bg-slate-900/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div>
@@ -239,8 +272,8 @@
         </div>
     </section>
 
-    <!-- ==================== O/L EXAM ANSWER WRITING GUIDE ==================== -->
-    <section id="exam-guide" class="py-16 sm:py-24">
+    <!-- ==================== TAB 3: O/L EXAM ANSWER WRITING GUIDE ==================== -->
+    <section id="exam-guide" data-tab-panel="exam-guide" class="tab-panel hidden py-14 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto">
                 <span class="text-xs font-bold uppercase tracking-widest text-burgundy-600 dark:text-amber-400">Exam Strategy</span>
@@ -336,94 +369,33 @@
         </div>
     </section>
 
-    <!-- ==================== INTERACTIVE SELF-CHECK QUIZ ==================== -->
-    <section id="quiz" class="py-16 sm:py-24 bg-parchment-100/70 dark:bg-slate-900/60 border-t border-parchment-200 dark:border-slate-800">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400">Revision Check</span>
-                <h2 class="mt-2 font-serif font-bold text-3xl sm:text-4xl text-ink-900 dark:text-white">
-                    O/L Literature Self-Check Quiz
-                </h2>
-                <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                    Test your knowledge across all prescribed genres.
-                </p>
-            </div>
-
-            <!-- Quiz Card Container -->
-            <div class="p-6 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-lg">
-                <!-- Progress Header -->
-                <div id="quiz-header" class="flex items-center justify-between pb-5 mb-6 border-b border-parchment-200 dark:border-slate-800">
-                    <span id="quiz-progress-text" class="text-xs font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400">
-                        Question 1 of 5
-                    </span>
-                    <span id="quiz-score-badge" class="text-xs font-semibold px-3 py-1 rounded-full bg-parchment-100 dark:bg-slate-800 text-ink-800 dark:text-slate-200">
-                        Score: 0
-                    </span>
-                </div>
-
-                <!-- Active Question View -->
-                <div id="quiz-body">
-                    <h3 id="quiz-question" class="font-serif font-bold text-xl sm:text-2xl text-ink-900 dark:text-white leading-snug">
-                        Loading question...
-                    </h3>
-
-                    <div id="quiz-options" class="mt-6 space-y-3">
-                        <!-- Options injected here -->
-                    </div>
-
-                    <!-- Instant Explanation Box -->
-                    <div id="quiz-feedback" class="hidden mt-6 p-4 rounded-xl border text-sm leading-relaxed">
-                        <p id="quiz-feedback-title" class="font-bold mb-1"></p>
-                        <p id="quiz-feedback-text"></p>
-                    </div>
-
-                    <!-- Next Button -->
-                    <div class="mt-8 flex justify-end">
-                        <button id="quiz-next-btn" class="hidden px-6 py-3 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm transition-all items-center gap-2">
-                            <span>Next Question</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Quiz Final Summary View -->
-                <div id="quiz-results" class="hidden text-center py-6">
-                    <div class="w-16 h-16 rounded-2xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-3xl mx-auto mb-4">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3 class="font-serif font-bold text-2xl sm:text-3xl text-ink-900 dark:text-white">Quiz Complete!</h3>
-                    <p id="final-score-display" class="mt-2 text-lg font-semibold text-burgundy-600 dark:text-amber-400">
-                        You scored 0 out of 5
-                    </p>
-                    <p id="final-score-message" class="mt-3 text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-                        Keep reviewing the study guides to sharpen your textual memory!
-                    </p>
-                    <button id="quiz-restart-btn" class="mt-8 px-6 py-3 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm transition-all inline-flex items-center gap-2">
-                        <i class="fas fa-rotate-right"></i>
-                        Try Again
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ==================== FOOTER ==================== -->
     <footer class="py-12 bg-parchment-50 dark:bg-slate-950 border-t border-parchment-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            <div>
-                <p class="font-serif font-bold text-lg text-ink-900 dark:text-white">
-                    O/L English Literature Hub
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-1">
+                    <i class="fas fa-user-check mr-1"></i>About the Creator
                 </p>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    "Literature adds to reality, it does not simply describe it." — C.S. Lewis
+                <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                    Built by the owner of <strong>LitHub O/L</strong>, who sat the G.C.E. O/L English Literature examination in <strong>2023</strong> and obtained an <strong> A pass</strong>—created to share clear, structured study notes with fellow students.
                 </p>
             </div>
-            <div class="flex flex-wrap justify-center gap-5 text-xs font-medium text-slate-600 dark:text-slate-400">
-                <a href="#syllabus" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Syllabus</a>
-                <a href="#devices" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Devices</a>
-                <a href="#exam-guide" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Exam Guide</a>
-                <a href="#quiz" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Quiz</a>
-                <a href="#top" class="text-burgundy-600 dark:text-amber-400 font-semibold">Back to Top &uarr;</a>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div>
+                    <p class="font-serif font-bold text-lg text-ink-900 dark:text-white">
+                        O/L English Literature Hub
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                        "Literature adds to reality, it does not simply describe it." — C.S. Lewis
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-5 text-xs font-medium text-slate-600 dark:text-slate-400">
+                    <a href="#syllabus" data-open-tab="syllabus" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Syllabus</a>
+                    <a href="#devices" data-open-tab="devices" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Devices</a>
+                    <a href="#exam-guide" data-open-tab="exam-guide" class="hover:text-burgundy-600 dark:hover:text-amber-400 transition-colors">Exam Guide</a>
+                    <a href="#top" class="text-burgundy-600 dark:text-amber-400 font-semibold">Back to Top &uarr;</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -434,9 +406,14 @@
             <!-- Modal Header -->
             <div class="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 sm:px-8 bg-parchment-50/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-parchment-200 dark:border-slate-800">
                 <div>
-                    <span id="modal-genre-badge" class="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-burgundy-600/10 text-burgundy-600 dark:bg-amber-400/15 dark:text-amber-400 mb-2">
-                        Poetry
-                    </span>
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span id="modal-genre-badge" class="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-burgundy-600/10 text-burgundy-600 dark:bg-amber-400/15 dark:text-amber-400">
+                            Poetry
+                        </span>
+                        <span id="modal-section-badge" class="hidden text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-800 dark:text-amber-300">
+                            Section: Nature
+                        </span>
+                    </div>
                     <h3 id="modal-title" class="font-serif font-bold text-2xl sm:text-3xl text-ink-900 dark:text-white">
                         Text Title
                     </h3>
@@ -459,6 +436,34 @@
                     <p id="modal-summary" class="text-sm sm:text-base text-ink-800 dark:text-slate-200 leading-relaxed">
                         Summary goes here.
                     </p>
+                </div>
+
+                <!-- Deeper Poetry Study Blocks (Form/Tone, Speaker/Voice, Symbols/Imagery, Exam Prompt) -->
+                <div id="modal-deep-poetry" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
+                        <h5 class="text-[11px] font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-1.5">
+                            <i class="fas fa-music mr-1"></i>Form, Structure & Tone
+                        </h5>
+                        <p id="modal-form-tone" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
+                        <h5 class="text-[11px] font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-1.5">
+                            <i class="fas fa-user-pen mr-1"></i>Speaker & Perspective
+                        </h5>
+                        <p id="modal-speaker-voice" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
+                        <h5 class="text-[11px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 mb-1.5">
+                            <i class="fas fa-eye mr-1"></i>Key Imagery & Symbols
+                        </h5>
+                        <p id="modal-imagery-symbols" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
+                        <h5 class="text-[11px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 mb-1.5">
+                            <i class="fas fa-clipboard-question mr-1"></i>Typical O/L Essay Question
+                        </h5>
+                        <p id="modal-sample-question" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
                 </div>
 
                 <!-- Themes -->
@@ -505,133 +510,173 @@
     <!-- ==================== APPLICATION LOGIC ==================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Full Syllabus Database with Exhaustive Stanza & Plot Section Breakdowns
+            // Full Syllabus Database with Anthology Poetry Sections & Deep Poetic Analysis
             const syllabusTexts = [
                 {
                     id: "eagle",
                     genre: "Poetry",
+                    poetrySection: "Nature",
                     title: "The Eagle",
                     author: "Alfred, Lord Tennyson",
                     themes: ["Power of Nature", "Majesty & Solitude", "Freedom"],
                     summary: "A vivid six-line lyric capturing the regal stillness, towering perspective, and sudden, lethal speed of an eagle perched high above the sea.",
+                    formAndTone: "Two three-line stanzas (tercets) with a tight AAA / BBB end-rhyme scheme. Moves from a calm, majestic, and elevated tone in Stanza 1 to a swift, dramatic, and intense tone in the final dive.",
+                    speakerAndVoice: "An observant third-person speaker watching from afar, viewing the eagle as a sovereign figure untouched by human interference.",
+                    imageryAndSymbols: "Visual and spatial contrast between 'crooked hands', 'azure world', and 'wrinkled sea' creates altitude; the 'thunderbolt' symbolizes sudden, irresistible power in nature.",
+                    sampleQuestion: "How does Tennyson use imagery and sound to convey the power and majesty of the eagle?",
                     analysisTitle: "Complete Line-by-Line Stanza Analysis (All 6 Lines)",
                     breakdown: [
-                        { quote: "Line 1: \"He clasps the crag with crooked hands;\"", note: "Personification ('hands' instead of claws) gives the eagle human-like authority. Harsh /k/ alliteration mimics the jagged cliff." },
-                        { quote: "Line 2: \"Close to the sun in lonely lands,\"", note: "Hyperbole elevates the eagle to a supreme height. 'Lonely lands' emphasizes majestic isolation rather than sorrow." },
-                        { quote: "Line 3: \"Ring'd with the azure world, he stands.\"", note: "Visual and colour imagery ('azure' = deep blue sky/sea) frames the bird at the center of the universe." },
-                        { quote: "Line 4: \"The wrinkled sea beneath him crawls;\"", note: "Shift in perspective to the ocean. Metaphor reduces massive waves to tiny 'wrinkles' that 'crawl' slowly due to immense altitude." },
-                        { quote: "Line 5: \"He watches from his mountain walls,\"", note: "Metaphor ('mountain walls') turns the natural cliff into a royal fortress observing its kingdom." },
-                        { quote: "Line 6: \"And like a thunderbolt he falls.\"", note: "Climactic simile captures explosive speed, irresistible force, and deadly precision, shattering the preceding stillness." }
+                        { quote: "Line 1: \"He clasps the crag with crooked hands;\"", note: "Personification ('hands' instead of claws) gives the eagle human-like authority. Harsh /k/ alliteration mimics the jagged cliff and tight grip." },
+                        { quote: "Line 2: \"Close to the sun in lonely lands,\"", note: "Hyperbole elevates the eagle to a supreme height. 'Lonely lands' emphasizes majestic isolation rather than sorrow, linking the bird with light and height." },
+                        { quote: "Line 3: \"Ring'd with the azure world, he stands.\"", note: "Visual and colour imagery ('azure' = deep blue sky/sea) frames the bird at the center of a vast expanse, reinforcing its command over its environment." },
+                        { quote: "Line 4: \"The wrinkled sea beneath him crawls;\"", note: "Shift in perspective down to the ocean. Metaphor reduces massive waves to tiny 'wrinkles' that 'crawl' slowly due to immense altitude and distance." },
+                        { quote: "Line 5: \"He watches from his mountain walls,\"", note: "Metaphor ('mountain walls') turns the natural cliff into a royal fortress where the eagle surveys its domain before striking." },
+                        { quote: "Line 6: \"And like a thunderbolt he falls.\"", note: "Climactic simile captures explosive speed, gravity, and deadly precision, shattering the quiet stillness of the opening five lines." }
                     ],
                     examTip: "Contrast the static, calm mood of Lines 1–5 with the sudden kinetic energy of Line 6. Mention the AAA BBB rhyme scheme."
                 },
                 {
                     id: "war-is-kind",
                     genre: "Poetry",
+                    poetrySection: "Conflict",
                     title: "War is Kind",
                     author: "Stephen Crane",
                     themes: ["Anti-War Satire", "Grief & Loss", "Deception of Glory"],
                     summary: "A bitingly ironic anti-war poem contrasting the comforting refrain that 'war is kind' against the brutal reality of battlefield deaths.",
+                    formAndTone: "Five irregular stanzas combining direct addresses to grieving loved ones with indented marching-style stanzas, unified by the ironic refrain 'Do not weep. / War is kind.' Tone is bitterly ironic, sarcastic, and mournful.",
+                    speakerAndVoice: "A detached, critically observant voice addressing a maiden, a babe, and a mother—exposing the gap between comforting words and devastating human loss.",
+                    imageryAndSymbols: "Auditory imagery ('Hoarse, booming drums'), grim battlefield visuals ('yellow trenches', 'thousand corpses'), and symbolic military emblems ('blazing flag', 'Eagle with crest of red and gold') undercut false notions of glory.",
+                    sampleQuestion: "How does Stephen Crane use irony and contrast to show the harsh reality of war?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis (Stanzas 1–5)",
                     breakdown: [
-                        { quote: "Stanza 1: \"Do not weep, maiden, for war is kind...\"", note: "Verbal irony anchors the refrain. The lover's 'wild hands' show agony, while the 'affrighted steed' running alone underscores sudden death." },
-                        { quote: "Stanza 2: \"Hoarse, booming drums of the regiment...\"", note: "Auditory imagery represents military propaganda. 'Unexplained glory' exposes how soldiers are conditioned to die for abstract ideals." },
-                        { quote: "Stanza 3: \"Do not weep, babe, for war is kind...\"", note: "Addressing an infant heightens pathos. Graphic verbs ('tumbled', 'raged', 'gulped') strip away romantic heroism." },
-                        { quote: "Stanza 4: \"Swift blazing flag of the regiment...\"", note: "Visual symbolism critiques patriotic emblems. Oxymorons like 'virtue of slaughter' expose moral hypocrisy." },
-                        { quote: "Stanza 5: \"Mother whose heart hung humble as a button...\"", note: "Simile captures a mother's quiet, crushed grief, while 'bright splendid shroud' contrasts funeral pomp with tragic waste." }
+                        { quote: "Stanza 1: \"Do not weep, maiden, for war is kind...\"", note: "Verbal irony anchors the refrain. The lover's 'wild hands' show agony, while the 'affrighted steed' running alone underscores sudden death and bereavement." },
+                        { quote: "Stanza 2: \"Hoarse, booming drums of the regiment...\"", note: "Auditory imagery represents military recruitment and drumbeat momentum. 'Unexplained glory' exposes how young men are pushed toward slaughter without questioning why." },
+                        { quote: "Stanza 3: \"Do not weep, babe, for war is kind...\"", note: "Addressing an infant heightens emotional pathos. Graphic verbs ('tumbled', 'raged', 'gulped') strip away any romantic glamour from a father's death." },
+                        { quote: "Stanza 4: \"Swift blazing flag of the regiment...\"", note: "Visual symbolism critiques patriotic banners and emblems. Paradoxical phrases like 'virtue of slaughter' and 'excellence of killing' expose moral contradiction." },
+                        { quote: "Stanza 5: \"Mother whose heart hung humble as a button...\"", note: "Simile captures a mother's quiet, crushed grief, while 'bright splendid shroud' contrasts ceremonial burial pomp with the tragic waste of a son's life." }
                     ],
                     examTip: "Analyze the structural contrast between the three personal stanzas and the two indented marching stanzas critiquing propaganda."
                 },
                 {
                     id: "clowns-wife",
                     genre: "Poetry",
+                    poetrySection: "Society",
                     title: "The Clown's Wife",
                     author: "Johnson Agard",
                     themes: ["Appearance vs. Reality", "Hidden Sorrow", "Domestic Empathy"],
                     summary: "Told through the dramatic monologue of a clown's wife, revealing the exhausting melancholy behind the painted smile of a public entertainer.",
+                    formAndTone: "Written as a conversational dramatic monologue in free verse with short, punchy lines. Tone shifts from confidential and protective to tender and weary.",
+                    speakerAndVoice: "The clown's wife speaks directly to the listener in an intimate, colloquial voice—claiming privileged knowledge of who he really is behind closed doors.",
+                    imageryAndSymbols: "Costume details ('red nose', 'funny clothes') symbolize public performance and expectation, while 'deflated balloon' vividly captures emotional deflation once the show ends.",
+                    sampleQuestion: "How does Agard contrast the clown's public image with his private life?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
-                        { quote: "Stanza 1: \"About my husband you don't know / what I know...\"", note: "Establishes an intimate, conversational tone. The wife draws a sharp boundary between public perception and private truth." },
-                        { quote: "Stanza 2: \"He's the king of the clowning world...\"", note: "Visual symbols of comedy ('red nose', 'funny clothes') highlight his public success and costume." },
-                        { quote: "Stanza 3: \"But when he comes home / he's like a deflated balloon...\"", note: "Powerful simile captures complete physical and emotional exhaustion once applause stops." },
-                        { quote: "Stanza 4: \"He doesn't say a word / he doesn't crack a joke...\"", note: "Repetition emphasizes heavy silence and emotional burnout—a stark reversal of his stage persona." },
-                        { quote: "Stanza 5: \"So I put on my best smile... Life is no laughing matter, my love.\"", note: "Role reversal and poignant irony: the wife performs cheerfulness to comfort the comedian." }
+                        { quote: "Stanza 1: \"About my husband you don't know / what I know...\"", note: "Establishes an intimate, conversational tone. The wife draws a sharp boundary between audience entertainment and private emotional truth." },
+                        { quote: "Stanza 2: \"He's the king of the clowning world...\"", note: "Visual symbols of comedy ('red nose', 'funny clothes') highlight his public success, applause, and expected role as someone who makes others laugh." },
+                        { quote: "Stanza 3: \"But when he comes home / he's like a deflated balloon...\"", note: "Powerful simile captures complete physical and emotional exhaustion once performance pressure drops—mirroring a balloon losing air." },
+                        { quote: "Stanza 4: \"He doesn't say a word / he doesn't crack a joke...\"", note: "Repetition emphasizes heavy silence and emotional burnout—a stark reversal of his stage persona as a source of constant humor." },
+                        { quote: "Stanza 5: \"So I put on my best smile... Life is no laughing matter, my love.\"", note: "Role reversal and poignant irony: the wife puts on a supportive smile to comfort him, reminding us that real life carries weight beyond comedy." }
                     ],
                     examTip: "Highlight the contrast between public mask and private vulnerability, and how colloquial diction authenticates the wife's voice."
                 },
                 {
                     id: "richard-cory",
                     genre: "Poetry",
+                    poetrySection: "Society",
                     title: "Richard Cory",
                     author: "Edwin Arlington Robinson",
                     themes: ["Illusion of Wealth", "Social Class Divide", "Hidden Despair"],
                     summary: "Working-class townspeople idolize Richard Cory for his wealth, grace, and aristocratic charm—until his shocking suicide shatters their assumptions.",
+                    formAndTone: "Four quatrains with a steady ABAB rhyme scheme and smooth iambic rhythm. Tone is admiring and envious through the first three stanzas, turning stark and sobering at the end.",
+                    speakerAndVoice: "A collective first-person plural narrator ('We people on the pavement') representing ordinary working people looking up at a wealthy figure.",
+                    imageryAndSymbols: "Images of refinement, polish, and light ('quietly arrayed', 'glittered', 'imperially slim') symbolize outward perfection, contrasting sharply with the quiet darkness of the final stanza.",
+                    sampleQuestion: "What does 'Richard Cory' reveal about judging people by outward appearances and wealth?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
-                        { quote: "Stanza 1: \"Whenever Richard Cory went down town...\"", note: "First-person plural ('We people on the pavement') creates a collective working-class perspective elevating Cory." },
-                        { quote: "Stanza 2: \"And he was always quietly arrayed...\"", note: "Diction like 'fluttered pulses' and 'glittered' shows the townspeople's star-struck admiration." },
-                        { quote: "Stanza 3: \"And he was rich—yes, richer than a king...\"", note: "Hyperbole and 'we thought' reveal envy and the naive assumption that wealth guarantees happiness." },
-                        { quote: "Stanza 4: \"So on we worked, and waited for the light...\"", note: "Situational irony: while the poor struggle yet endure, Cory ends his life on a calm summer night." }
+                        { quote: "Stanza 1: \"Whenever Richard Cory went down town...\"", note: "First-person plural ('We people on the pavement') creates a collective working-class perspective that places Cory on a pedestal." },
+                        { quote: "Stanza 2: \"And he was always quietly arrayed...\"", note: "Diction and poise ('gentle', 'quietly arrayed', 'glittered') show the townspeople's admiration for his refined manners and effortless grace." },
+                        { quote: "Stanza 3: \"And he was rich—yes, richer than a king...\"", note: "Hyperbole and 'we thought' reveal envy and the assumption that wealth and status automatically bring happiness and fulfillment." },
+                        { quote: "Stanza 4: \"So on we worked, and waited for the light...\"", note: "Situational irony: while ordinary workers endure hardship and wait for better days, Cory takes his own life—exposing hidden inner pain." }
                     ],
                     examTip: "Discuss how Robinson builds a steady ballad rhythm so that the blunt final line delivers maximum psychological shock."
                 },
                 {
                     id: "fear",
                     genre: "Poetry",
+                    poetrySection: "Life",
                     title: "Fear",
                     author: "Gabriela Mistral",
                     themes: ["Maternal Anxiety", "Growing Up", "Fear of Losing a Child"],
                     summary: "A mother voices her tender yet anxious wish that her young daughter never grows up into a swallow, a princess, or a queen—fearing each transformation will take her away.",
+                    formAndTone: "Short, lyrical stanzas built around anaphora ('I don't want them to...'). Tone is deeply affectionate, protective, and quietly anxious about time and growing up.",
+                    speakerAndVoice: "A devoted mother speaking tenderly to or about her young daughter, expressing a parent's fear of distance as a child matures.",
+                    imageryAndSymbols: "The 'swallow' symbolizes flight and independence, 'golden slippers' / 'princess' suggests social status or romantic distance, and 'queen' represents distant authority away from the mother's side.",
+                    sampleQuestion: "How does Gabriela Mistral convey a mother's mixed feelings about her child growing up?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
-                        { quote: "Stanza 1: \"I don't want them to turn / my little girl into a swallow...\"", note: "The swallow symbolizes freedom. The mother's 'straw bed' and combing hair reflect intimate maternal closeness." },
-                        { quote: "Stanza 2: \"I don't want them to make / my little girl a princess...\"", note: "The princess and golden slippers symbolize status, which the mother sees as restrictive and emotionally distancing." },
-                        { quote: "Stanza 3: \"And even less do I want them / one day to make her queen...\"", note: "Climactic escalation to a throne, representing supreme power and ultimate separation." }
+                        { quote: "Stanza 1: \"I don't want them to turn / my little girl into a swallow...\"", note: "The swallow symbolizes freedom and flying away. Intimate details of closeness show the mother cherishing her child's nearness." },
+                        { quote: "Stanza 2: \"I don't want them to make / my little girl a princess...\"", note: "The princess and golden slippers symbolize elevated status, which the mother fears will separate the girl from simple home bonds." },
+                        { quote: "Stanza 3: \"And even less do I want them / one day to make her queen...\"", note: "Climactic escalation to a throne represents supreme power and ultimate distance—highlighting the mother's fear of losing her little girl." }
                     ],
                     examTip: "Analyze the progression from swallow (freedom) to princess (wealth) to queen (power)—all things society prizes, yet the mother fears."
                 },
                 {
                     id: "once-upon-a-time",
                     genre: "Poetry",
+                    poetrySection: "Society",
                     title: "Once Upon a Time",
                     author: "Gabriel Okara",
                     themes: ["Loss of Innocence", "Social Hypocrisy", "Cultural Change"],
                     summary: "A father laments to his young son how adults have replaced genuine warmth with fake smiles, asking to relearn childhood authenticity.",
+                    formAndTone: "Seven stanzas beginning with a fairy-tale phrase ('Once upon a time'). Tone is reflective, regretful, and earnest—contrasting past sincerity with present artificiality.",
+                    speakerAndVoice: "A father addressing his young son directly, confessing how adult social habits have hardened his own behavior while looking to his son's honesty as a guide.",
+                    imageryAndSymbols: "Warmth and sincerity are linked to 'hearts' and 'eyes', while insincerity is shown through 'laughing with their teeth', 'ice-block-cold' eyes, and 'many faces' worn like 'dresses'.",
+                    sampleQuestion: "How does Gabriel Okara contrast past sincerity with present-day insincerity in 'Once Upon a Time'?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
-                        { quote: "Stanzas 1–2: \"Once upon a time, son, they used to laugh with their hearts...\"", note: "Fairy-tale opening frames sincerity as lost. Laughing with 'teeth' vs. 'hearts' exposes hypocrisy." },
-                        { quote: "Stanzas 3–4: \"So I have learned many things, son. / I have learned to wear many faces...\"", note: "Extended simile comparing personas to 'dresses' illustrates loss of true selfhood under conformity." },
-                        { quote: "Stanzas 5–7: \"So show me, son, / how to laugh; show me how / I used to laugh and smile...\"", note: "Role reversal: the adult asks the child to become his teacher, pleading for emotional rebirth." }
+                        { quote: "Stanzas 1–2: \"Once upon a time, son, they used to laugh with their hearts...\"", note: "Fairy-tale opening frames genuine warmth as something felt in the past. Laughing with 'teeth' vs. 'hearts' exposes superficial politeness." },
+                        { quote: "Stanzas 3–4: \"So I have learned many things, son. / I have learned to wear many faces...\"", note: "Extended simile comparing personas to 'dresses' illustrates how people adapt their expressions and behavior to fit different social crowds." },
+                        { quote: "Stanzas 5–7: \"So show me, son, / how to laugh; show me how / I used to laugh and smile...\"", note: "Role reversal: the adult asks the child to become his teacher, longing to shed fake habits and recover natural, unguarded joy." }
                     ],
                     examTip: "Focus on body imagery ('hearts', 'eyes', 'teeth', 'hands', 'faces') and how Okara contrasts communal warmth with modern individualism."
                 },
                 {
                     id: "camel-hump",
                     genre: "Poetry",
+                    poetrySection: "Humour",
                     title: "The Camel's Hump",
                     author: "Rudyard Kipling",
                     themes: ["Idleness vs. Hard Work", "Humor & Moral Lesson", "Self-Discipline"],
                     summary: "A playful, rhythmic cautionary poem warning that laziness leads to a metaphorical 'Cameelious hump' that only hard work can cure.",
+                    formAndTone: "Bouncy, musical stanzas with playful rhymes, invented words, and energetic rhythm. Tone is lively, humorous, and gently teasing while delivering a clear practical moral.",
+                    speakerAndVoice: "A spirited, mischievous speaker talking directly to readers who might feel sluggish, grumpy, or reluctant to get started on tasks.",
+                    imageryAndSymbols: "The 'Cameelious hump' acts as a humorous symbol for laziness, grumpiness, and procrastination, while active tools ('hoe and a shovel') symbolize practical effort.",
+                    sampleQuestion: "How does Rudyard Kipling use humour to encourage hard work and a positive attitude?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
-                        { quote: "Stanzas 1–2: \"The Camel's hump is an ugly lump / Which well you may see at the Zoo...\"", note: "Humorous internal rhyme and stretched vowels create a nursery-rhyme tone introducing laziness." },
-                        { quote: "Stanzas 3–4: \"We climb out of bed with a frouzly head / And a snarly-yarly voice...\"", note: "Onomatopoeia and vivid adjectives depict cranky moods." },
-                        { quote: "Stanzas 5–6: \"The cure for this ill is not to sit still... But to take a large hoe and a shovel also...\"", note: "Practical prescription: physical labor replaces sluggishness with healthy energy." }
+                        { quote: "Stanzas 1–2: \"The Camel's hump is an ugly lump / Which well you may see at the Zoo...\"", note: "Humorous internal rhyme and stretched vowels create a lively, playful tone that turns laziness into a funny, noticeable 'hump'." },
+                        { quote: "Stanzas 3–4: \"We climb out of bed with a frouzly head / And a snarly-yarly voice...\"", note: "Onomatopoeia and expressive adjectives ('frouzly', 'snarly-yarly') capture morning crankiness and reluctance in a comic way." },
+                        { quote: "Stanzas 5–6: \"The cure for this ill is not to sit still... But to take a large hoe and a shovel also...\"", note: "Practical prescription: getting up and working physically shakes off sluggishness, turning complaint into energy and accomplishment." }
                     ],
                     examTip: "Comment on Kipling's energetic rhythm, invented words, and how humor makes a didactic message enjoyable."
                 },
                 {
                     id: "upside-down",
                     genre: "Poetry",
+                    poetrySection: "Humour",
                     title: "Upside-Down",
                     author: "Alexander Kushner",
                     themes: ["Childhood Curiosity", "Eccentricity & Humor", "Unconventional Thinking"],
                     summary: "A witty narrative poem about an eccentric man who sees the world literally upside-down, turning everyday routines into comic mishaps.",
+                    formAndTone: "Brisk, rhyming narrative verse with playful reversals. Tone is whimsical, light-hearted, and deadpan—treating topsy-turvy logic with comic seriousness.",
+                    speakerAndVoice: "An amused storyteller narrating a world turned on its head, inviting the reader to enjoy the absurdity and fresh perspective.",
+                    imageryAndSymbols: "Inverted spatial images (floors, ceilings, shoes, and upside-down viewpoints) symbolize breaking routine habits and seeing familiar things from a new angle.",
+                    sampleQuestion: "What makes 'Upside-Down' humorous, and what message does its playful reversal suggest?",
                     analysisTitle: "Complete Stanza-by-Stanza Analysis",
                     breakdown: [
-                        { quote: "Opening Stanzas: The Upside-Down Perspective", note: "Introduces a protagonist whose perception is inverted—treating ceilings as floors with deadpan seriousness." },
-                        { quote: "Middle Stanzas: Everyday Misunderstandings", note: "Ordinary tasks become absurd adventures because he refuses to conform to spatial logic." },
-                        { quote: "Closing Stanzas: The Value of a Different Viewpoint", note: "Celebration of imagination: looking at life from an upside-down angle refreshes wonder." }
+                        { quote: "Opening Stanzas: The Upside-Down Perspective", note: "Introduces a protagonist whose perception is inverted—treating ceilings and floors with deadpan seriousness that sets up immediate comedy." },
+                        { quote: "Middle Stanzas: Everyday Misunderstandings", note: "Ordinary tasks become absurd adventures because he refuses to conform to everyday logic, creating comic surprises." },
+                        { quote: "Closing Stanzas: The Value of a Different Viewpoint", note: "Celebration of imagination: looking at life from an unconventional angle refreshes curiosity and keeps wonder alive." }
                     ],
                     examTip: "Highlight how Kushner uses comic exaggeration and brisk rhythm to celebrate creative curiosity."
                 },
@@ -720,6 +765,8 @@
                         { quote: "Part 2: The Heroic Journey", note: "Haunted by guilt, the young boy walks across unfamiliar roads to bring Tony home, testing his courage." },
                         { quote: "Part 3: Memory & Acceptance", note: "Through film-like flashbacks, Abeysekara explores how childhood attachments shape adult identity." }
                     ],
+                    previewUrl: "https://drive.google.com/file/d/11n8zKQJNmvjYh31x3R-K7fEG8kNygsdC/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=11n8zKQJNmvjYh31x3R-K7fEG8kNygsdC",
                     examTip: "Comment on first-person retrospective narration, sensory details of 1950s Sri Lanka, and Tony as a symbol of loyalty."
                 },
                 {
@@ -750,11 +797,13 @@
                         { quote: "Part 2: Mali's Westernization & Clash", note: "Mali returns from America with Grace, demanding massive funds for a story-writing machine." },
                         { quote: "Part 3: Renunciation & Crossing the River", note: "When Mali is arrested, Jagan refuses to compromise, handing over business keys to seek inner peace." }
                     ],
+                    previewUrl: "https://drive.google.com/file/d/1coXoaYPddLEUfTP1CrLYvmbDI9CHCSjk/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=1coXoaYPddLEUfTP1CrLYvmbDI9CHCSjk",
                     examTip: "Analyze Narayan's gentle irony toward Jagan's contradictions and the contrast between Malgudi traditions and Mali's modernity."
                 }
             ];
 
-            // Literary Devices Data
+            // Literary Devices Data (18 Terms)
             const literaryDevices = [
                 { name: "Irony (Verbal & Situational)", category: "Tone", definition: "A contrast between expectation and reality, or saying the opposite of what is meant.", example: "Repeating 'War is kind' in Stephen Crane's poem while describing battlefield deaths." },
                 { name: "Personification", category: "Imagery", definition: "Giving human qualities, emotions, or actions to animals, objects, or nature.", example: "'He clasps the crag with crooked hands' (The Eagle)." },
@@ -764,42 +813,80 @@
                 { name: "Alliteration", category: "Sound", definition: "Repetition of initial consonant sounds in nearby words.", example: "'He clasps the crag with crooked hands' (/k/ sounds)." },
                 { name: "Oxymoron", category: "Contrast", definition: "Combining two contradictory terms side by side.", example: "'Virtue of slaughter' and 'bright splendid shroud'." },
                 { name: "Dramatic Monologue", category: "Form", definition: "A poem written as a speech by a single fictional character revealing inner thoughts.", example: "The wife speaking in 'The Clown's Wife'." },
-                { name: "Farcical Comedy", category: "Genre", definition: "Dramatic genre characterized by improbable situations, crude characterizations, and slapstick.", example: "Anton Chekhov's play 'The Bear'." }
+                { name: "Farcical Comedy", category: "Genre", definition: "Dramatic genre characterized by improbable situations, crude characterizations, and slapstick.", example: "Anton Chekhov's play 'The Bear'." },
+                { name: "Onomatopoeia", category: "Sound", definition: "Words that imitate or suggest the natural sound of the thing they describe.", example: "'Hoarse, booming drums' or buzzing, crackling, and rustling sounds." },
+                { name: "Symbolism", category: "Meaning", definition: "Using a concrete object, creature, or action to represent a deeper abstract idea or theme.", example: "The white rose stained red symbolizing love born through sacrifice in 'The Nightingale and the Rose'." },
+                { name: "Repetition", category: "Emphasis", definition: "Deliberately repeating words, phrases, or lines to build rhythm, urgency, or emotional weight.", example: "'He doesn't say a word / he doesn't crack a joke' in 'The Clown's Wife'." },
+                { name: "Sensory Imagery", category: "Imagery", definition: "Descriptive language appealing to sight, sound, touch, smell, or taste to create a vivid mental picture.", example: "'Ring'd with the azure world' (visual) and 'The wrinkled sea beneath him crawls' (visual/tactile)." },
+                { name: "Foreshadowing", category: "Plot", definition: "Hints or clues early in a story or drama that suggest events or outcomes later in the plot.", example: "Tsu's secret weaving room and Yohyo's impatience hinting at a broken promise in 'Twilight of a Crane'." },
+                { name: "Rhetorical Question", category: "Style", definition: "A question asked for effect or emphasis rather than to receive a literal answer.", example: "Questioning whether status or wealth truly brings peace or fulfillment." },
+                { name: "Antithesis", category: "Contrast", definition: "Placing strongly contrasting ideas or clauses side by side in balanced phrasing.", example: "Contrasting genuine childhood warmth with adult social hypocrisy in 'Once Upon a Time'." },
+                { name: "Satire", category: "Tone", definition: "Using wit, irony, or ridicule to expose and criticize human folly, greed, or social hypocrisy.", example: "Saki's mockery of rigid adult authority in 'The Lumber Room'." },
+                { name: "Allusion", category: "Reference", definition: "A brief, indirect reference to a well-known historical, mythological, literary, or cultural figure or text.", example: "Referring to classical myths, kings, or fairy-tale openings to enrich meaning." }
             ];
 
-            // Quiz Data
-            const quizQuestions = [
-                {
-                    question: "1. In 'The Eagle', what literary device is used in 'And like a thunderbolt he falls'?",
-                    options: ["Metaphor", "Simile", "Oxymoron", "Alliteration"],
-                    correct: 1,
-                    explanation: "Using 'like' to compare the eagle's sudden dive to a thunderbolt is a simile."
-                },
-                {
-                    question: "2. In 'The Lumber Room', how does Nicholas distract his aunt so he can explore?",
-                    options: ["He hides in the attic", "He pretends he wants to enter the gooseberry garden", "He runs away to the village", "He locks her in the pantry"],
-                    correct: 1,
-                    explanation: "Nicholas cleverly tricks his strict aunt into guarding the gooseberry garden while he slips into the lumber room."
-                },
-                {
-                    question: "3. In 'The Nightingale and the Rose', what does the Nightingale do to create the red rose?",
-                    options: ["She paints white petals with her tears", "She presses her breast against a thorn through the night", "She sings magic spells over the bush", "She trades jewels with the garden creatures"],
-                    correct: 1,
-                    explanation: "She sacrifices her life by pressing her heart against a thorn, staining the white rose with her blood."
-                },
-                {
-                    question: "4. In 'Twilight of a Crane', what secret does Yohyo uncover by breaking his promise?",
-                    options: ["Tsu is hiding gold coins", "Tsu weaves cloth in her true crane form", "Tsu wants to leave the village", "Tsu is working with Sodo and Unzu"],
-                    correct: 1,
-                    explanation: "Driven by greed, Yohyo peeks into the weaving room and discovers his wife is actually a crane."
-                },
-                {
-                    question: "5. In 'The Bear', how does the fiery argument between Popova and Smirnov end?",
-                    options: ["They duel with pistols", "Smirnov leaves without his money", "They fall in love and get engaged", "Luka calls the police"],
-                    correct: 2,
-                    explanation: "Impressed by her fierce spirit during their duel preparation, Smirnov falls in love and proposes on the spot."
+            // ==================== TAB SWITCHING LOGIC ====================
+            const sectionTabs = document.querySelectorAll('.section-tab');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            const navTabLinks = document.querySelectorAll('.nav-tab-link');
+            const tabTriggers = document.querySelectorAll('[data-open-tab]');
+
+            const setActiveTab = (tabName, scrollToTabs = false) => {
+                tabPanels.forEach(panel => {
+                    const isMatch = panel.getAttribute('data-tab-panel') === tabName;
+                    panel.classList.toggle('hidden', !isMatch);
+                });
+
+                sectionTabs.forEach(tab => {
+                    const isSelected = tab.getAttribute('data-tab') === tabName;
+                    tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+                    tab.classList.toggle('bg-burgundy-600', isSelected);
+                    tab.classList.toggle('text-white', isSelected);
+                    tab.classList.toggle('font-semibold', isSelected);
+                    tab.classList.toggle('shadow-sm', isSelected);
+
+                    tab.classList.toggle('bg-white', !isSelected);
+                    tab.classList.toggle('dark:bg-slate-900', !isSelected);
+                    tab.classList.toggle('text-slate-700', !isSelected);
+                    tab.classList.toggle('dark:text-slate-300', !isSelected);
+                    tab.classList.toggle('border', !isSelected);
+                    tab.classList.toggle('border-parchment-200', !isSelected);
+                    tab.classList.toggle('dark:border-slate-700', !isSelected);
+                });
+
+                navTabLinks.forEach(link => {
+                    const isCurrent = link.getAttribute('data-open-tab') === tabName;
+                    link.classList.toggle('text-burgundy-600', isCurrent);
+                    link.classList.toggle('dark:text-amber-400', isCurrent);
+                    link.classList.toggle('font-semibold', isCurrent);
+                    link.classList.toggle('text-slate-700', !isCurrent);
+                    link.classList.toggle('dark:text-slate-300', !isCurrent);
+                    link.classList.toggle('font-medium', !isCurrent);
+                });
+
+                if (scrollToTabs) {
+                    const tabsEl = document.getElementById('workspace-tabs');
+                    if (tabsEl) {
+                        tabsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 }
-            ];
+            };
+
+            sectionTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    setActiveTab(tab.getAttribute('data-tab'), false);
+                });
+            });
+
+            tabTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    const targetTab = trigger.getAttribute('data-open-tab');
+                    if (trigger.tagName === 'A') {
+                        e.preventDefault();
+                    }
+                    setActiveTab(targetTab, true);
+                });
+            });
 
             // ==================== THEME & NAVIGATION LOGIC ====================
             const htmlEl = document.documentElement;
@@ -836,19 +923,40 @@
             // ==================== SYLLABUS RENDER & FILTER ====================
             const syllabusGrid = document.getElementById('syllabus-grid');
             const genreTabs = document.querySelectorAll('.genre-tab');
+            const poetrySectionBar = document.getElementById('poetry-section-bar');
+            const poetrySecBtns = document.querySelectorAll('.poetry-sec-btn');
 
-            const renderSyllabus = (selectedGenre = 'All') => {
-                const filtered = selectedGenre === 'All'
-                    ? syllabusTexts
-                    : syllabusTexts.filter(item => item.genre === selectedGenre);
+            let activeGenre = 'All';
+            let activePoetrySection = 'All';
+
+            const updatePoetryBarVisibility = () => {
+                poetrySectionBar.classList.toggle('hidden', activeGenre !== 'Poetry');
+            };
+
+            const renderSyllabus = () => {
+                updatePoetryBarVisibility();
+
+                const filtered = syllabusTexts.filter(item => {
+                    const genreMatch = activeGenre === 'All' || item.genre === activeGenre;
+                    if (!genreMatch) return false;
+                    if (activeGenre === 'Poetry' && activePoetrySection !== 'All') {
+                        return item.poetrySection === activePoetrySection;
+                    }
+                    return true;
+                });
 
                 syllabusGrid.innerHTML = filtered.map(item => `
                     <article class="flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
                         <div>
-                            <div class="flex items-center justify-between gap-2 mb-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                                 <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-burgundy-600/10 text-burgundy-600 dark:bg-amber-400/15 dark:text-amber-400">
                                     ${item.genre}
                                 </span>
+                                ${item.poetrySection ? `
+                                    <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-800 dark:text-amber-300">
+                                        ${item.poetrySection}
+                                    </span>
+                                ` : ''}
                             </div>
                             <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">${item.title}</h3>
                             <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5 mb-3">by ${item.author}</p>
@@ -880,11 +988,48 @@
                     tab.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-parchment-200', 'dark:border-slate-700');
                     tab.classList.add('bg-burgundy-600', 'text-white', 'font-semibold', 'shadow-sm');
 
-                    renderSyllabus(tab.getAttribute('data-genre'));
+                    activeGenre = tab.getAttribute('data-genre');
+                    if (activeGenre !== 'Poetry') {
+                        activePoetrySection = 'All';
+                        poetrySecBtns.forEach(b => {
+                            const isAll = b.getAttribute('data-poetry-section') === 'All';
+                            b.classList.toggle('bg-burgundy-600', isAll);
+                            b.classList.toggle('text-white', isAll);
+                            b.classList.toggle('font-semibold', isAll);
+                            b.classList.toggle('bg-white', !isAll);
+                            b.classList.toggle('dark:bg-slate-800', !isAll);
+                            b.classList.toggle('text-slate-700', !isAll);
+                            b.classList.toggle('dark:text-slate-300', !isAll);
+                            b.classList.toggle('border', !isAll);
+                            b.classList.toggle('border-parchment-200', !isAll);
+                            b.classList.toggle('dark:border-slate-700', !isAll);
+                        });
+                    }
+                    renderSyllabus();
                 });
             });
 
-            renderSyllabus('All');
+            poetrySecBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    activePoetrySection = btn.getAttribute('data-poetry-section');
+                    poetrySecBtns.forEach(b => {
+                        const selected = b === btn;
+                        b.classList.toggle('bg-burgundy-600', selected);
+                        b.classList.toggle('text-white', selected);
+                        b.classList.toggle('font-semibold', selected);
+                        b.classList.toggle('bg-white', !selected);
+                        b.classList.toggle('dark:bg-slate-800', !selected);
+                        b.classList.toggle('text-slate-700', !selected);
+                        b.classList.toggle('dark:text-slate-300', !selected);
+                        b.classList.toggle('border', !selected);
+                        b.classList.toggle('border-parchment-200', !selected);
+                        b.classList.toggle('dark:border-slate-700', !selected);
+                    });
+                    renderSyllabus();
+                });
+            });
+
+            renderSyllabus();
 
             // ==================== STUDY GUIDE MODAL LOGIC ====================
             const modal = document.getElementById('study-modal');
@@ -895,11 +1040,36 @@
                 if (!item) return;
 
                 document.getElementById('modal-genre-badge').textContent = item.genre;
+
+                const sectionBadge = document.getElementById('modal-section-badge');
+                if (item.poetrySection) {
+                    sectionBadge.textContent = `Section: ${item.poetrySection}`;
+                    sectionBadge.classList.remove('hidden');
+                    sectionBadge.classList.add('inline-block');
+                } else {
+                    sectionBadge.classList.add('hidden');
+                    sectionBadge.classList.remove('inline-block');
+                }
+
                 document.getElementById('modal-title').textContent = item.title;
                 document.getElementById('modal-author').textContent = `by ${item.author}`;
                 document.getElementById('modal-summary').textContent = item.summary;
                 document.getElementById('modal-analysis-title').innerHTML = `<i class="fas fa-feather-pointed mr-1.5"></i>${item.analysisTitle}`;
                 document.getElementById('modal-tip').textContent = item.examTip;
+
+                // Deeper Poetry Study Blocks
+                const deepPoetryEl = document.getElementById('modal-deep-poetry');
+                if (item.genre === 'Poetry' && item.formAndTone) {
+                    document.getElementById('modal-form-tone').textContent = item.formAndTone;
+                    document.getElementById('modal-speaker-voice').textContent = item.speakerAndVoice;
+                    document.getElementById('modal-imagery-symbols').textContent = item.imageryAndSymbols;
+                    document.getElementById('modal-sample-question').textContent = item.sampleQuestion;
+                    deepPoetryEl.classList.remove('hidden');
+                    deepPoetryEl.classList.add('grid');
+                } else {
+                    deepPoetryEl.classList.add('hidden');
+                    deepPoetryEl.classList.remove('grid');
+                }
 
                 // Handle Drive PDF Links visibility
                 const pdfContainer = document.getElementById('modal-pdf-container');
@@ -998,116 +1168,6 @@
 
             deviceSearch.addEventListener('input', (e) => renderDevices(e.target.value));
             renderDevices();
-
-            // ==================== INTERACTIVE QUIZ LOGIC ====================
-            let currentQIndex = 0;
-            let score = 0;
-            let answered = false;
-
-            const qProgressText = document.getElementById('quiz-progress-text');
-            const qScoreBadge = document.getElementById('quiz-score-badge');
-            const qTitle = document.getElementById('quiz-question');
-            const qOptions = document.getElementById('quiz-options');
-            const qFeedback = document.getElementById('quiz-feedback');
-            const qFeedbackTitle = document.getElementById('quiz-feedback-title');
-            const qFeedbackText = document.getElementById('quiz-feedback-text');
-            const qNextBtn = document.getElementById('quiz-next-btn');
-            const quizBody = document.getElementById('quiz-body');
-            const quizHeader = document.getElementById('quiz-header');
-            const quizResults = document.getElementById('quiz-results');
-
-            const loadQuestion = () => {
-                answered = false;
-                const q = quizQuestions[currentQIndex];
-                qProgressText.textContent = `Question ${currentQIndex + 1} of ${quizQuestions.length}`;
-                qScoreBadge.textContent = `Score: ${score}`;
-                qTitle.textContent = q.question;
-                qFeedback.classList.add('hidden');
-                qNextBtn.classList.add('hidden');
-                qNextBtn.classList.remove('inline-flex');
-
-                qOptions.innerHTML = q.options.map((opt, idx) => `
-                    <button 
-                        data-index="${idx}"
-                        class="quiz-opt-btn w-full text-left p-4 rounded-xl border border-parchment-200 dark:border-slate-700 bg-parchment-50/60 dark:bg-slate-800/50 hover:border-burgundy-600 dark:hover:border-amber-400 text-sm font-medium text-ink-900 dark:text-slate-100 transition-all flex items-center gap-3"
-                    >
-                        <span class="w-7 h-7 rounded-lg bg-white dark:bg-slate-700 border border-parchment-200 dark:border-slate-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
-                            ${String.fromCharCode(65 + idx)}
-                        </span>
-                        <span>${opt}</span>
-                    </button>
-                `).join('');
-
-                document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
-                    btn.addEventListener('click', () => handleOptionSelect(parseInt(btn.getAttribute('data-index'))));
-                });
-            };
-
-            const handleOptionSelect = (selectedIndex) => {
-                if (answered) return;
-                answered = true;
-
-                const q = quizQuestions[currentQIndex];
-                const allBtns = document.querySelectorAll('.quiz-opt-btn');
-                const isCorrect = selectedIndex === q.correct;
-
-                if (isCorrect) {
-                    score++;
-                    qScoreBadge.textContent = `Score: ${score}`;
-                }
-
-                allBtns.forEach((btn, idx) => {
-                    btn.disabled = true;
-                    if (idx === q.correct) {
-                        btn.classList.remove('border-parchment-200', 'dark:border-slate-700');
-                        btn.classList.add('bg-emerald-500/15', 'border-emerald-600', 'text-emerald-900', 'dark:text-emerald-200');
-                    } else if (idx === selectedIndex && !isCorrect) {
-                        btn.classList.remove('border-parchment-200', 'dark:border-slate-700');
-                        btn.classList.add('bg-rose-500/15', 'border-rose-600', 'text-rose-900', 'dark:text-rose-200');
-                    }
-                });
-
-                qFeedback.classList.remove('hidden', 'bg-emerald-500/10', 'border-emerald-500/30', 'text-emerald-900', 'dark:text-emerald-200', 'bg-rose-500/10', 'border-rose-500/30', 'text-rose-900', 'dark:text-rose-200');
-                if (isCorrect) {
-                    qFeedback.classList.add('bg-emerald-500/10', 'border-emerald-500/30', 'text-emerald-900', 'dark:text-emerald-200');
-                    qFeedbackTitle.textContent = 'Correct!';
-                } else {
-                    qFeedback.classList.add('bg-rose-500/10', 'border-rose-500/30', 'text-rose-900', 'dark:text-rose-200');
-                    qFeedbackTitle.textContent = 'Not quite!';
-                }
-                qFeedbackText.textContent = q.explanation;
-
-                qNextBtn.querySelector('span').textContent = currentQIndex === quizQuestions.length - 1 ? 'See Results' : 'Next Question';
-                qNextBtn.classList.remove('hidden');
-                qNextBtn.classList.add('inline-flex');
-            };
-
-            qNextBtn.addEventListener('click', () => {
-                currentQIndex++;
-                if (currentQIndex < quizQuestions.length) {
-                    loadQuestion();
-                } else {
-                    quizBody.classList.add('hidden');
-                    quizHeader.classList.add('hidden');
-                    quizResults.classList.remove('hidden');
-                    document.getElementById('final-score-display').textContent = `You scored ${score} out of ${quizQuestions.length}`;
-                    document.getElementById('final-score-message').textContent =
-                        score >= 4 ? 'Excellent command of the O/L Literature syllabus across all genres!' :
-                        score >= 3 ? 'Good effort! Review the study guides above to strengthen your textual analysis.' :
-                        'A solid start—explore the anthology cards and literary devices above, then try again!';
-                }
-            });
-
-            document.getElementById('quiz-restart-btn').addEventListener('click', () => {
-                currentQIndex = 0;
-                score = 0;
-                quizResults.classList.add('hidden');
-                quizBody.classList.remove('hidden');
-                quizHeader.classList.remove('hidden');
-                loadQuestion();
-            });
-
-            loadQuestion();
         });
     </script>
 </body>
