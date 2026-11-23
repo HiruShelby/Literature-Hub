@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O/L English Literature Hub | Sri Lanka G.C.E. Study Guide</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Google Fonts: Playfair Display (Literary Serif) & Inter (Legible Sans-Serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-    <!-- Load Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -48,7 +44,6 @@
         }
     </script>
     <style>
-        /* Custom Sepia Mode Overrides */
         body.sepia-mode {
             background-color: #F4ECD8 !important;
             color: #433422 !important;
@@ -68,11 +63,9 @@
 </head>
 <body id="app-body" class="bg-parchment-50 text-ink-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-burgundy-600 selection:text-white">
 
-    <!-- ==================== NAVIGATION BAR ==================== -->
     <header class="sticky top-0 z-40 bg-parchment-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-parchment-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 md:h-20">
-                <!-- Brand Title -->
                 <a href="#top" data-open-tab="syllabus" class="flex items-center gap-3 group">
                     <div class="w-10 h-10 rounded-xl bg-burgundy-600 text-white flex items-center justify-center shadow-sm group-hover:bg-burgundy-700 transition-colors">
                         <i class="fas fa-feather-pointed text-lg"></i>
@@ -87,16 +80,13 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links (Switch Tabs) -->
                 <nav class="hidden md:flex items-center gap-7">
                     <a href="#syllabus" data-open-tab="syllabus" class="nav-tab-link text-sm font-semibold text-burgundy-600 dark:text-amber-400 transition-colors">Anthology Texts</a>
                     <a href="#devices" data-open-tab="devices" class="nav-tab-link text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Literary Devices</a>
                     <a href="#exam-guide" data-open-tab="exam-guide" class="nav-tab-link text-sm font-medium text-slate-700 hover:text-burgundy-600 dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Answer Writing</a>
                 </nav>
 
-                <!-- Reading Mode Switcher & Mobile Menu -->
                 <div class="flex items-center gap-2 sm:gap-3">
-                    <!-- 3-Mode Reading Toggle -->
                     <div class="flex items-center bg-parchment-100 dark:bg-slate-800 p-1 rounded-xl border border-parchment-200 dark:border-slate-700" role="group" aria-label="Reading Theme">
                         <button data-theme="light" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-medium bg-white text-ink-900 shadow-sm transition-all" title="Warm Parchment Mode">
                             <i class="fas fa-sun text-amber-600"></i>
@@ -112,7 +102,6 @@
                         </button>
                     </div>
 
-                    <!-- Mobile Menu Toggle -->
                     <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800 transition-colors">
                         <i class="fas fa-bars text-lg"></i>
                     </button>
@@ -120,7 +109,6 @@
             </div>
         </div>
 
-        <!-- Mobile Dropdown Drawer -->
         <div id="mobile-menu" class="hidden md:hidden bg-parchment-50 dark:bg-slate-900 border-b border-parchment-200 dark:border-slate-800 px-4 pt-2 pb-5 space-y-1.5 shadow-lg">
             <a href="#syllabus" data-open-tab="syllabus" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">1. Anthology Study Guides</a>
             <a href="#devices" data-open-tab="devices" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-ink-800 dark:text-slate-200 hover:bg-parchment-100 dark:hover:bg-slate-800">2. Literary Devices Cheat-Sheet</a>
@@ -128,7 +116,6 @@
         </div>
     </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
     <section id="top" class="relative py-14 sm:py-20 overflow-hidden border-b border-parchment-200/80 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold tracking-wide uppercase mb-6">
@@ -141,14 +128,13 @@
             </h1>
 
             <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Your complete study companion for the Sri Lankan G.C.E. O/L Literature syllabus. Switch between tabs to explore poem and prose breakdowns, literary devices, and essay frameworks.
+                Revision notes, stanza-by-stanza breakdowns, and exam tips for the Sri Lankan G.C.E. O/L Literature syllabus. Pick a section below to start revising.
             </p>
 
-            <!-- Quick-Jump Tab Buttons -->
             <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                 <button type="button" data-open-tab="syllabus" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold text-sm shadow-md shadow-burgundy-600/20 transition-all flex items-center justify-center gap-2">
                     <i class="fas fa-book"></i>
-                    Explore All Syllabus Texts
+                    Browse Syllabus Texts
                 </button>
                 <button type="button" data-open-tab="devices" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-parchment-100 dark:hover:bg-slate-800 text-ink-900 dark:text-white font-semibold text-sm border border-parchment-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
                     <i class="fas fa-sparkles text-amber-600"></i>
@@ -162,7 +148,6 @@
         </div>
     </section>
 
-    <!-- ==================== MAIN TAB BAR ==================== -->
     <div id="workspace-tabs" class="bg-parchment-100/80 dark:bg-slate-900/70 border-b border-parchment-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-wrap gap-2.5" role="tablist" aria-label="Study Sections">
@@ -182,22 +167,19 @@
         </div>
     </div>
 
-    <!-- ==================== TAB 1: INTERACTIVE SYLLABUS EXPLORER ==================== -->
     <section id="syllabus" data-tab-panel="syllabus" class="tab-panel py-14 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Heading & Genre Filter Tabs -->
             <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-parchment-200 dark:border-slate-800">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-widest text-burgundy-600 dark:text-amber-400">Anthology Guide</span>
                     <h2 class="mt-2 font-serif font-bold text-3xl sm:text-4xl text-ink-900 dark:text-white">
-                        Prescribed Literary Texts & Full Overviews
+                        Prescribed Texts & Study Notes
                     </h2>
                     <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                        Filter by genre (and anthology poetry sections like <strong>Nature</strong>, <strong>Conflict</strong>, <strong>Society</strong>, <strong>Life</strong>, and <strong>Humour</strong>) and click <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for deep analysis.
+                        Filter by genre or poetry section (<strong>Nature</strong>, <strong>Conflict</strong>, <strong>Society</strong>, <strong>Life</strong>, and <strong>Humour</strong>) and open <strong class="font-semibold text-ink-800 dark:text-slate-200">"Read Study Guide"</strong> for detailed notes.
                     </p>
                 </div>
 
-                <!-- Genre Filter Tabs -->
                 <div class="flex flex-wrap gap-2" id="genre-filters" role="tablist">
                     <button data-genre="All" class="genre-tab active px-4 py-2 rounded-xl text-sm font-semibold bg-burgundy-600 text-white shadow-sm transition-all">
                         All Texts
@@ -217,7 +199,6 @@
                 </div>
             </div>
 
-            <!-- Poetry Anthology Sub-Section Filter Bar -->
             <div id="poetry-section-bar" class="hidden mt-6 p-4 rounded-2xl bg-parchment-100/80 dark:bg-slate-900/70 border border-parchment-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <span class="text-xs font-bold uppercase tracking-wider text-burgundy-700 dark:text-amber-400">
                     <i class="fas fa-feather mr-1.5"></i>Anthology Poetry Sections:
@@ -232,14 +213,10 @@
                 </div>
             </div>
 
-            <!-- Cards Grid (Populated via JavaScript) -->
-            <div id="syllabus-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Dynamic Cards Inserted Here -->
-            </div>
+            <div id="syllabus-grid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </section>
 
-    <!-- ==================== TAB 2: LITERARY DEVICES & POETIC TERMS ==================== -->
     <section id="devices" data-tab-panel="devices" class="tab-panel hidden py-14 sm:py-20 bg-parchment-100/70 dark:bg-slate-900/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -249,11 +226,10 @@
                         Literary Devices & Poetic Terms
                     </h2>
                     <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                        Essential terminology needed to analyze unseen and prescribed texts in Paper I & II.
+                        Key terms and syllabus examples for answering context questions and essays in Paper I and Paper II.
                     </p>
                 </div>
 
-                <!-- Search Input -->
                 <div class="w-full md:w-72 relative">
                     <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
                     <input 
@@ -265,14 +241,10 @@
                 </div>
             </div>
 
-            <!-- Devices Grid -->
-            <div id="devices-grid" class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                <!-- Dynamic Device Cards Inserted Here -->
-            </div>
+            <div id="devices-grid" class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
         </div>
     </section>
 
-    <!-- ==================== TAB 3: O/L EXAM ANSWER WRITING GUIDE ==================== -->
     <section id="exam-guide" data-tab-panel="exam-guide" class="tab-panel hidden py-14 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto">
@@ -281,23 +253,22 @@
                     How to Write High-Scoring O/L Answers
                 </h2>
                 <p class="mt-3 text-slate-600 dark:text-slate-400">
-                    Examiners look for clear textual evidence and analytical explanation rather than mere plot retelling. Use these two proven frameworks.
+                    Markers award top bands for clear textual evidence and close analysis rather than plot summary. Keep these two structures in mind during the exam.
                 </p>
             </div>
 
             <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Guide 1: Context Questions -->
                 <div class="p-7 sm:p-9 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm">
                     <div class="flex items-center gap-3 mb-5">
                         <span class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-700 dark:text-amber-400 flex items-center justify-center font-serif font-bold text-lg">I</span>
                         <div>
-                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">Mastering Context Questions</h3>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Paper I &bull; Part A (Identifying Extracts)</p>
+                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">Context Questions</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Paper I &bull; Part A (Short Extracts)</p>
                         </div>
                     </div>
 
                     <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                        When given a short quote from any syllabus text, ensure your answer covers these <strong>4 essential checkpoints</strong>:
+                        When identifying an extract from a prescribed text, cover these <strong>4 checkpoints</strong> in a tight, clear answer:
                     </p>
 
                     <div class="space-y-4">
@@ -305,63 +276,62 @@
                             <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
                             <div>
                                 <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Title & Author</h4>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">State the exact title (in quotation marks or underlined) and author's full name.</p>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Name the exact text (in quotation marks or underlined) and the author's full name.</p>
                             </div>
                         </div>
                         <div class="flex gap-3.5">
                             <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
                             <div>
                                 <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Speaker & Listener</h4>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Identify who speaks these words and to whom (or narrator's inner thought).</p>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">State who speaks the lines and to whom (or whether it is the narrator's thought).</p>
                             </div>
                         </div>
                         <div class="flex gap-3.5">
                             <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
                             <div>
                                 <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Immediate Situation</h4>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Briefly explain what is happening at that exact moment in the plot.</p>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Briefly describe what is happening in the story or poem at that exact moment.</p>
                             </div>
                         </div>
                         <div class="flex gap-3.5">
                             <span class="flex-shrink-0 w-6 h-6 rounded-full bg-burgundy-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">4</span>
                             <div>
-                                <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Literary Significance</h4>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Explain what the quote reveals about character, theme, tone, or technique.</p>
+                                <h4 class="font-semibold text-sm text-ink-900 dark:text-white">Significance</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Point out what the extract shows about a character, theme, mood, or literary device.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Guide 2: The P.E.E.L. Paragraph Method -->
                 <div class="p-7 sm:p-9 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 shadow-sm">
                     <div class="flex items-center gap-3 mb-5">
                         <span class="w-10 h-10 rounded-xl bg-burgundy-600/10 text-burgundy-600 dark:text-amber-400 flex items-center justify-center font-serif font-bold text-lg">II</span>
                         <div>
-                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">The P.E.E.L. Essay Method</h3>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Paper II &bull; Literary Appreciation Essays</p>
+                            <h3 class="font-serif font-bold text-xl text-ink-900 dark:text-white">The P.E.E.L. Paragraph Structure</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Paper II &bull; Essay Questions</p>
                         </div>
                     </div>
 
                     <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                        Structure every body paragraph in your essays using <strong>P.E.E.L.</strong> to stay focused on the question:
+                        Build each body paragraph around <strong>P.E.E.L.</strong> so your essay stays directly tied to the question:
                     </p>
 
                     <div class="space-y-3.5">
                         <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
                             <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">P — Point:</span>
-                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Begin with a clear topic sentence answering the prompt.</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Open with a clear topic sentence that directly answers the prompt.</span>
                         </div>
                         <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
                             <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">E — Evidence:</span>
-                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Embed a short, accurate quotation or specific textual detail.</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Include a brief, accurate quote or specific incident from the text.</span>
                         </div>
                         <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
                             <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">E — Explanation:</span>
-                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Analyze <em>how</em> the language, imagery, or action creates meaning.</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Explain <em>how</em> the writer's word choice, imagery, or character action supports your point.</span>
                         </div>
                         <div class="p-3.5 rounded-xl bg-parchment-50 dark:bg-slate-800/70 border border-parchment-200 dark:border-slate-700">
                             <span class="font-serif font-bold text-burgundy-600 dark:text-amber-400">L — Link:</span>
-                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Connect your insight back to the main theme or prompt.</span>
+                            <span class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 ml-1">Tie the paragraph back to the question before moving to your next point.</span>
                         </div>
                     </div>
                 </div>
@@ -369,10 +339,8 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="py-12 bg-parchment-50 dark:bg-slate-950 border-t border-parchment-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <!-- Printed PDFs Order Card -->
             <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-parchment-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <p class="text-[11px] font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-1">
@@ -382,7 +350,7 @@
                         All printed PDFs and Study Notebook for Rs. 700
                     </p>
                 </div>
-                <a href="https://wa.me/94784702816?text=Hi%2C%20I%20would%20like%20to%20order%20all%20printed%20PDFs%20for%20Rs.%201%2C000." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-sm transition-colors">
+                <a href="https://wa.me/94784702816?text=Hi%2C%20I%20would%20like%20to%20order%20all%20printed%20PDFs%20for%20Rs.%20700." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-sm transition-colors">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>Contact me</span>
                 </a>
@@ -393,7 +361,7 @@
                     <i class="fas fa-user-check mr-1"></i>About the Creator
                 </p>
                 <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                    Built by the owner of <strong>LitHub O/L</strong>, who sat the G.C.E. O/L English Literature examination in <strong>2023</strong> and obtained an <strong> A pass</strong>—created to share clear, structured study notes with fellow students.
+                    Created by the founder of <strong>LitHub O/L</strong>, who sat the G.C.E. O/L English Literature examination in <strong>2023</strong> and earned an <strong>A pass</strong>—built to share practical, exam-ready notes with students.
                 </p>
             </div>
 
@@ -416,10 +384,8 @@
         </div>
     </footer>
 
-    <!-- ==================== STUDY GUIDE MODAL ==================== -->
     <div id="study-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-900/65 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="bg-parchment-50 dark:bg-slate-900 border border-parchment-200 dark:border-slate-700 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-            <!-- Modal Header -->
             <div class="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 sm:px-8 bg-parchment-50/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-parchment-200 dark:border-slate-800">
                 <div>
                     <div class="flex flex-wrap items-center gap-2 mb-2">
@@ -442,19 +408,16 @@
                 </button>
             </div>
 
-            <!-- Modal Body -->
             <div class="p-6 sm:p-8 space-y-6">
-                <!-- Summary -->
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-                        <i class="fas fa-align-left mr-1.5 text-burgundy-600 dark:text-amber-400"></i>Concise Overview
+                        <i class="fas fa-align-left mr-1.5 text-burgundy-600 dark:text-amber-400"></i>Overview
                     </h4>
                     <p id="modal-summary" class="text-sm sm:text-base text-ink-800 dark:text-slate-200 leading-relaxed">
                         Summary goes here.
                     </p>
                 </div>
 
-                <!-- Deeper Poetry Study Blocks (Form/Tone, Speaker/Voice, Symbols/Imagery, Exam Prompt) -->
                 <div id="modal-deep-poetry" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
                         <h5 class="text-[11px] font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-1.5">
@@ -482,25 +445,20 @@
                     </div>
                 </div>
 
-                <!-- Themes -->
                 <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/60 border border-parchment-200 dark:border-slate-700">
                     <h4 class="text-xs font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400 mb-2">
-                        Key Themes & Motifs
+                        Key Themes
                     </h4>
-                    <ul id="modal-themes" class="flex flex-wrap gap-2 text-xs font-medium">
-                    </ul>
+                    <ul id="modal-themes" class="flex flex-wrap gap-2 text-xs font-medium"></ul>
                 </div>
 
-                <!-- Complete Section/Stanza Breakdown -->
                 <div id="modal-breakdown-wrapper" class="space-y-4">
                     <h4 id="modal-analysis-title" class="text-xs font-bold uppercase tracking-wider text-burgundy-600 dark:text-amber-400">
-                        <i class="fas fa-feather-pointed mr-1.5"></i>Complete Stanza & Section Breakdown
+                        <i class="fas fa-feather-pointed mr-1.5"></i>Stanza & Section Breakdown
                     </h4>
-                    <div id="modal-breakdown" class="space-y-3">
-                    </div>
+                    <div id="modal-breakdown" class="space-y-3"></div>
                 </div>
 
-                <!-- O/L Context Tip -->
                 <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25">
                     <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 mb-2">
                         <i class="fas fa-lightbulb mr-1.5"></i>O/L Exam Focus Tip
@@ -510,12 +468,11 @@
                     </p>
                 </div>
 
-                <!-- Google Drive PDF Resource Link Container -->
                 <div id="modal-pdf-container" class="hidden pt-4 border-t border-parchment-200 dark:border-slate-800 flex flex-wrap gap-3">
-                    <a id="modal-preview-btn" href="#" target="_blank" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold transition-all inline-flex items-center gap-2">
-                        <i class="fas fa-eye"></i> Preview Drive PDF
+                    <a id="modal-preview-btn" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold transition-all inline-flex items-center gap-2">
+                        <i class="fas fa-eye"></i> Preview Study PDF
                     </a>
-                    <a id="modal-download-btn" href="#" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold transition-all inline-flex items-center gap-2">
+                    <a id="modal-download-btn" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold transition-all inline-flex items-center gap-2">
                         <i class="fas fa-download"></i> Download PDF
                     </a>
                 </div>
@@ -523,10 +480,8 @@
         </div>
     </div>
 
-    <!-- ==================== APPLICATION LOGIC ==================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Full Syllabus Database with Anthology Poetry Sections & Deep Poetic Analysis
             const syllabusTexts = [
                 {
                     id: "eagle",
@@ -535,19 +490,19 @@
                     title: "The Eagle",
                     author: "Alfred, Lord Tennyson",
                     themes: ["Power of Nature", "Majesty & Solitude", "Freedom"],
-                    summary: "A vivid six-line lyric capturing the regal stillness, towering perspective, and sudden, lethal speed of an eagle perched high above the sea.",
-                    formAndTone: "Two three-line stanzas (tercets) with a tight AAA / BBB end-rhyme scheme. Moves from a calm, majestic, and elevated tone in Stanza 1 to a swift, dramatic, and intense tone in the final dive.",
+                    summary: "A six-line lyric capturing the regal stillness, towering perspective, and sudden, lethal speed of an eagle perched high above the sea.",
+                    formAndTone: "Two three-line stanzas (tercets) with an AAA / BBB end-rhyme scheme. Moves from a calm, majestic tone in Stanza 1 to a swift, dramatic drop in the final line.",
                     speakerAndVoice: "An observant third-person speaker watching from afar, viewing the eagle as a sovereign figure untouched by human interference.",
                     imageryAndSymbols: "Visual and spatial contrast between 'crooked hands', 'azure world', and 'wrinkled sea' creates altitude; the 'thunderbolt' symbolizes sudden, irresistible power in nature.",
                     sampleQuestion: "How does Tennyson use imagery and sound to convey the power and majesty of the eagle?",
-                    analysisTitle: "Complete Line-by-Line Stanza Analysis (All 6 Lines)",
+                    analysisTitle: "Line-by-Line Stanza Analysis (All 6 Lines)",
                     breakdown: [
                         { quote: "Line 1: \"He clasps the crag with crooked hands;\"", note: "Personification ('hands' instead of claws) gives the eagle human-like authority. Harsh /k/ alliteration mimics the jagged cliff and tight grip." },
-                        { quote: "Line 2: \"Close to the sun in lonely lands,\"", note: "Hyperbole elevates the eagle to a supreme height. 'Lonely lands' emphasizes majestic isolation rather than sorrow, linking the bird with light and height." },
-                        { quote: "Line 3: \"Ring'd with the azure world, he stands.\"", note: "Visual and colour imagery ('azure' = deep blue sky/sea) frames the bird at the center of a vast expanse, reinforcing its command over its environment." },
-                        { quote: "Line 4: \"The wrinkled sea beneath him crawls;\"", note: "Shift in perspective down to the ocean. Metaphor reduces massive waves to tiny 'wrinkles' that 'crawl' slowly due to immense altitude and distance." },
-                        { quote: "Line 5: \"He watches from his mountain walls,\"", note: "Metaphor ('mountain walls') turns the natural cliff into a royal fortress where the eagle surveys its domain before striking." },
-                        { quote: "Line 6: \"And like a thunderbolt he falls.\"", note: "Climactic simile captures explosive speed, gravity, and deadly precision, shattering the quiet stillness of the opening five lines." }
+                        { quote: "Line 2: \"Close to the sun in lonely lands,\"", note: "Hyperbole elevates the eagle to a supreme height. 'Lonely lands' suggests majestic isolation rather than sadness, linking the bird with light and height." },
+                        { quote: "Line 3: \"Ring'd with the azure world, he stands.\"", note: "Colour imagery ('azure' = deep blue sky and sea) frames the bird at the center of a vast expanse, reinforcing its command over its surroundings." },
+                        { quote: "Line 4: \"The wrinkled sea beneath him crawls;\"", note: "Shift in perspective down to the ocean. Metaphor reduces massive waves to tiny 'wrinkles' that 'crawl' slowly because of the bird's immense height." },
+                        { quote: "Line 5: \"He watches from his mountain walls,\"", note: "Metaphor ('mountain walls') turns the natural cliff into a royal fortress where the eagle surveys its territory before striking." },
+                        { quote: "Line 6: \"And like a thunderbolt he falls.\"", note: "Climactic simile captures explosive speed, gravity, and deadly precision, breaking the stillness of the opening five lines." }
                     ],
                     examTip: "Contrast the static, calm mood of Lines 1–5 with the sudden kinetic energy of Line 6. Mention the AAA BBB rhyme scheme."
                 },
@@ -563,7 +518,7 @@
                     speakerAndVoice: "A detached, critically observant voice addressing a maiden, a babe, and a mother—exposing the gap between comforting words and devastating human loss.",
                     imageryAndSymbols: "Auditory imagery ('Hoarse, booming drums'), grim battlefield visuals ('yellow trenches', 'thousand corpses'), and symbolic military emblems ('blazing flag', 'Eagle with crest of red and gold') undercut false notions of glory.",
                     sampleQuestion: "How does Stephen Crane use irony and contrast to show the harsh reality of war?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis (Stanzas 1–5)",
+                    analysisTitle: "Stanza-by-Stanza Analysis (Stanzas 1–5)",
                     breakdown: [
                         { quote: "Stanza 1: \"Do not weep, maiden, for war is kind...\"", note: "Verbal irony anchors the refrain. The lover's 'wild hands' show agony, while the 'affrighted steed' running alone underscores sudden death and bereavement." },
                         { quote: "Stanza 2: \"Hoarse, booming drums of the regiment...\"", note: "Auditory imagery represents military recruitment and drumbeat momentum. 'Unexplained glory' exposes how young men are pushed toward slaughter without questioning why." },
@@ -585,7 +540,7 @@
                     speakerAndVoice: "The clown's wife speaks directly to the listener in an intimate, colloquial voice—claiming privileged knowledge of who he really is behind closed doors.",
                     imageryAndSymbols: "Costume details ('red nose', 'funny clothes') symbolize public performance and expectation, while 'deflated balloon' vividly captures emotional deflation once the show ends.",
                     sampleQuestion: "How does Agard contrast the clown's public image with his private life?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
+                    analysisTitle: "Stanza-by-Stanza Analysis",
                     breakdown: [
                         { quote: "Stanza 1: \"About my husband you don't know / what I know...\"", note: "Establishes an intimate, conversational tone. The wife draws a sharp boundary between audience entertainment and private emotional truth." },
                         { quote: "Stanza 2: \"He's the king of the clowning world...\"", note: "Visual symbols of comedy ('red nose', 'funny clothes') highlight his public success, applause, and expected role as someone who makes others laugh." },
@@ -607,7 +562,7 @@
                     speakerAndVoice: "A collective first-person plural narrator ('We people on the pavement') representing ordinary working people looking up at a wealthy figure.",
                     imageryAndSymbols: "Images of refinement, polish, and light ('quietly arrayed', 'glittered', 'imperially slim') symbolize outward perfection, contrasting sharply with the quiet darkness of the final stanza.",
                     sampleQuestion: "What does 'Richard Cory' reveal about judging people by outward appearances and wealth?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
+                    analysisTitle: "Stanza-by-Stanza Analysis",
                     breakdown: [
                         { quote: "Stanza 1: \"Whenever Richard Cory went down town...\"", note: "First-person plural ('We people on the pavement') creates a collective working-class perspective that places Cory on a pedestal." },
                         { quote: "Stanza 2: \"And he was always quietly arrayed...\"", note: "Diction and poise ('gentle', 'quietly arrayed', 'glittered') show the townspeople's admiration for his refined manners and effortless grace." },
@@ -628,7 +583,7 @@
                     speakerAndVoice: "A devoted mother speaking tenderly to or about her young daughter, expressing a parent's fear of distance as a child matures.",
                     imageryAndSymbols: "The 'swallow' symbolizes flight and independence, 'golden slippers' / 'princess' suggests social status or romantic distance, and 'queen' represents distant authority away from the mother's side.",
                     sampleQuestion: "How does Gabriela Mistral convey a mother's mixed feelings about her child growing up?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
+                    analysisTitle: "Stanza-by-Stanza Analysis",
                     breakdown: [
                         { quote: "Stanza 1: \"I don't want them to turn / my little girl into a swallow...\"", note: "The swallow symbolizes freedom and flying away. Intimate details of closeness show the mother cherishing her child's nearness." },
                         { quote: "Stanza 2: \"I don't want them to make / my little girl a princess...\"", note: "The princess and golden slippers symbolize elevated status, which the mother fears will separate the girl from simple home bonds." },
@@ -648,7 +603,7 @@
                     speakerAndVoice: "A father addressing his young son directly, confessing how adult social habits have hardened his own behavior while looking to his son's honesty as a guide.",
                     imageryAndSymbols: "Warmth and sincerity are linked to 'hearts' and 'eyes', while insincerity is shown through 'laughing with their teeth', 'ice-block-cold' eyes, and 'many faces' worn like 'dresses'.",
                     sampleQuestion: "How does Gabriel Okara contrast past sincerity with present-day insincerity in 'Once Upon a Time'?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
+                    analysisTitle: "Stanza-by-Stanza Analysis",
                     breakdown: [
                         { quote: "Stanzas 1–2: \"Once upon a time, son, they used to laugh with their hearts...\"", note: "Fairy-tale opening frames genuine warmth as something felt in the past. Laughing with 'teeth' vs. 'hearts' exposes superficial politeness." },
                         { quote: "Stanzas 3–4: \"So I have learned many things, son. / I have learned to wear many faces...\"", note: "Extended simile comparing personas to 'dresses' illustrates how people adapt their expressions and behavior to fit different social crowds." },
@@ -668,7 +623,7 @@
                     speakerAndVoice: "A spirited, mischievous speaker talking directly to readers who might feel sluggish, grumpy, or reluctant to get started on tasks.",
                     imageryAndSymbols: "The 'Cameelious hump' acts as a humorous symbol for laziness, grumpiness, and procrastination, while active tools ('hoe and a shovel') symbolize practical effort.",
                     sampleQuestion: "How does Rudyard Kipling use humour to encourage hard work and a positive attitude?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
+                    analysisTitle: "Stanza-by-Stanza Analysis",
                     breakdown: [
                         { quote: "Stanzas 1–2: \"The Camel's hump is an ugly lump / Which well you may see at the Zoo...\"", note: "Humorous internal rhyme and stretched vowels create a lively, playful tone that turns laziness into a funny, noticeable 'hump'." },
                         { quote: "Stanzas 3–4: \"We climb out of bed with a frouzly head / And a snarly-yarly voice...\"", note: "Onomatopoeia and expressive adjectives ('frouzly', 'snarly-yarly') capture morning crankiness and reluctance in a comic way." },
@@ -688,7 +643,7 @@
                     speakerAndVoice: "An amused storyteller narrating a world turned on its head, inviting the reader to enjoy the absurdity and fresh perspective.",
                     imageryAndSymbols: "Inverted spatial images (floors, ceilings, shoes, and upside-down viewpoints) symbolize breaking routine habits and seeing familiar things from a new angle.",
                     sampleQuestion: "What makes 'Upside-Down' humorous, and what message does its playful reversal suggest?",
-                    analysisTitle: "Complete Stanza-by-Stanza Analysis",
+                    analysisTitle: "Stanza-by-Stanza Analysis",
                     breakdown: [
                         { quote: "Opening Stanzas: The Upside-Down Perspective", note: "Introduces a protagonist whose perception is inverted—treating ceilings and floors with deadpan seriousness that sets up immediate comedy." },
                         { quote: "Middle Stanzas: Everyday Misunderstandings", note: "Ordinary tasks become absurd adventures because he refuses to conform to everyday logic, creating comic surprises." },
@@ -703,7 +658,7 @@
                     author: "Saki (H. H. Munro)",
                     themes: ["Childhood Imagination vs. Adult Hypocrisy", "Wit & Satire", "Punishment & Rebellion"],
                     summary: "Outsmarting his strict aunt, young Nicholas turns a day of punishment into a magical adventure inside the forbidden lumber room.",
-                    analysisTitle: "Complete Section-by-Section Plot Analysis",
+                    analysisTitle: "Section-by-Section Plot Analysis",
                     breakdown: [
                         { quote: "Part 1: The Frog in Bread-and-Milk", note: "Nicholas places a garden frog into his breakfast, exposing adult infallibility and stubbornness." },
                         { quote: "Part 2: Jagborough Deception", note: "The aunt bans him from the gooseberry garden; Nicholas tricks her into guarding it all afternoon." },
@@ -720,17 +675,17 @@
                     title: "The Nightingale and the Rose",
                     author: "Oscar Wilde",
                     themes: ["True Love vs. Materialism", "Self-Sacrifice", "Cynicism"],
-                    summary: "A compassionate Nightingale gives her life's blood to create a red rose for a young Student, only for his beloved to reject it for jewels.",
-                    analysisTitle: "Complete Section-by-Section Plot Analysis",
+                    summary: "A compassionate Nightingale gives her life's blood to create a red rose for a young Student, only for the Professor's daughter to reject it for jewels.",
+                    analysisTitle: "Section-by-Section Plot Analysis",
                     breakdown: [
-                        { quote: "Part 1: The Student's Lament", note: "The Student weeps because the Professor's daughter demands a red rose for a dance." },
-                        { quote: "Part 2: The Nightingale's Quest", note: "The Nightingale learns she must sing through the night with her breast against a thorn." },
-                        { quote: "Part 3: The Supreme Sacrifice", note: "Choosing love over life, she stains the white petals crimson with her life-blood." },
-                        { quote: "Part 4: Cynical Rejection", note: "The girl rejects the rose for jewels. The Student discards it into the gutter and returns to cold logic." }
+                        { quote: "Part 1: The Student's Lament", note: "The Student weeps in his garden because the Professor's daughter will only dance with him if he brings her a red rose." },
+                        { quote: "Part 2: The Nightingale's Quest", note: "After the White and Yellow Rose-trees cannot help, the Red Rose-tree under the Student's window reveals that a red rose must be stained with heart's-blood." },
+                        { quote: "Part 3: The Supreme Sacrifice", note: "Singing through the moonlight with her breast pressed against a thorn, the Nightingale gives her life to bloom a crimson rose." },
+                        { quote: "Part 4: Materialistic Rejection", note: "The girl rejects the rose because it clashes with her dress and prefers the Chamberlain's nephew's jewels. Unaware of the bird's sacrifice, the Student tosses the rose into the gutter and returns to his books." }
                     ],
-                    previewUrl: "https://drive.google.com/file/d/1hRddw1YlmbggggHnOW_awCqUL-1-y-PM/view?usp=drivesdk",
-                    downloadUrl: "https://drive.google.com/uc?export=download&id=1hRddw1YlmbggggHnOW_awCqUL-1-y-PM",
-                    examTip: "Discuss the contrast between the Nightingale's selfless devotion and the shallow materialism of the humans."
+                    previewUrl: "https://drive.google.com/file/d/15vOUVYLvTle_kqOZKi7Q8AsJ-YhdIlHM/view?usp=drivesdk",
+                    downloadUrl: "https://drive.google.com/uc?export=download&id=15vOUVYLvTle_kqOZKi7Q8AsJ-YhdIlHM",
+                    examTip: "Contrast the Nightingale's selfless devotion with the Student's shallow infatuation and the girl's materialism."
                 },
                 {
                     id: "twilight-crane",
@@ -739,7 +694,7 @@
                     author: "Junji Kinoshita",
                     themes: ["Greed vs. Selfless Love", "Broken Promises", "Innocence vs. Corruption"],
                     summary: "Based on a Japanese folktale, Tsu weaves magical cloth from her feathers out of love for Yohyo, until greed destroys their happiness.",
-                    analysisTitle: "Complete Act-by-Act Dramatic Breakdown",
+                    analysisTitle: "Act-by-Act Dramatic Breakdown",
                     breakdown: [
                         { quote: "Act I: Innocence & Devotion", note: "Yohyo and Tsu live a simple, affectionate life. Tsu weaves magical cloth to support him." },
                         { quote: "Act II: The Villagers' Manipulation", note: "Greedy villagers Sodo and Unzu manipulate Yohyo's innocence with dreams of wealth and city luxury." },
@@ -757,7 +712,7 @@
                     author: "Anton Chekhov",
                     themes: ["Human Hypocrisy", "Love & Passion", "Farce & Satire"],
                     summary: "A one-act comic farce where a grieving widow and an aggressive debt-collector argue furiously before falling in love.",
-                    analysisTitle: "Complete Act-by-Act Dramatic Breakdown",
+                    analysisTitle: "Act-by-Act Dramatic Breakdown",
                     breakdown: [
                         { quote: "Exposition: Theatrical Mourning", note: "Popova locks herself indoors in black mourning clothes, boasting of eternal fidelity." },
                         { quote: "Inciting Incident: Smirnov's Arrival", note: "Smirnov barges in demanding repayment of her late husband's debt." },
@@ -775,7 +730,7 @@
                     author: "Tissa Abeysekara",
                     themes: ["Childhood Memory & Nostalgia", "Loyalty & Guilt", "Changing Sri Lankan Society"],
                     summary: "An autobiographical novella recounting a young boy's desperate journey across suburban Colombo to rescue his dog Tony after family relocation.",
-                    analysisTitle: "Complete Section-by-Section Plot Breakdown",
+                    analysisTitle: "Section-by-Section Plot Breakdown",
                     breakdown: [
                         { quote: "Part 1: Relocation & Heartbreak", note: "Set in 1950s Sri Lanka, financial hardship forces the family to move from Depanama and leave Tony behind." },
                         { quote: "Part 2: The Heroic Journey", note: "Haunted by guilt, the young boy walks across unfamiliar roads to bring Tony home, testing his courage." },
@@ -792,7 +747,7 @@
                     author: "Mark Twain",
                     themes: ["Social Justice & Empathy", "Appearance vs. Reality", "Power & Responsibility"],
                     summary: "Prince Edward Tudor and pauper Tom Canty swap identities in 16th-century London, teaching the future king firsthand compassion.",
-                    analysisTitle: "Complete Section-by-Section Plot Breakdown",
+                    analysisTitle: "Section-by-Section Plot Breakdown",
                     breakdown: [
                         { quote: "Part 1: The Identical Swap", note: "Born on the same day, Edward and Tom switch clothes at Westminster. Edward is cast out into the streets." },
                         { quote: "Part 2: Edward's Hardship Among the Poor", note: "Protected by Miles Hendon, Edward experiences brutal Tudor laws and injustice firsthand." },
@@ -807,7 +762,7 @@
                     author: "R. K. Narayan",
                     themes: ["Tradition vs. Modernity", "Generational Conflict", "Detachment & Self-Discovery"],
                     summary: "Jagan, a Gandhian sweet-maker in Malgudi, struggles with his Westernized son Mali, ultimately choosing spiritual detachment.",
-                    analysisTitle: "Complete Section-by-Section Plot Breakdown",
+                    analysisTitle: "Section-by-Section Plot Breakdown",
                     breakdown: [
                         { quote: "Part 1: Jagan's Routine & Principles", note: "Living simply in Malgudi, Jagan spins yarn and reads the Bhagavad Gita while managing sweet profits." },
                         { quote: "Part 2: Mali's Westernization & Clash", note: "Mali returns from America with Grace, demanding massive funds for a story-writing machine." },
@@ -819,7 +774,6 @@
                 }
             ];
 
-            // Literary Devices Data (18 Terms)
             const literaryDevices = [
                 { name: "Irony (Verbal & Situational)", category: "Tone", definition: "A contrast between expectation and reality, or saying the opposite of what is meant.", example: "Repeating 'War is kind' in Stephen Crane's poem while describing battlefield deaths." },
                 { name: "Personification", category: "Imagery", definition: "Giving human qualities, emotions, or actions to animals, objects, or nature.", example: "'He clasps the crag with crooked hands' (The Eagle)." },
@@ -841,7 +795,6 @@
                 { name: "Allusion", category: "Reference", definition: "A brief, indirect reference to a well-known historical, mythological, literary, or cultural figure or text.", example: "Referring to classical myths, kings, or fairy-tale openings to enrich meaning." }
             ];
 
-            // ==================== TAB SWITCHING LOGIC ====================
             const sectionTabs = document.querySelectorAll('.section-tab');
             const tabPanels = document.querySelectorAll('.tab-panel');
             const navTabLinks = document.querySelectorAll('.nav-tab-link');
@@ -904,7 +857,6 @@
                 });
             });
 
-            // ==================== THEME & NAVIGATION LOGIC ====================
             const htmlEl = document.documentElement;
             const bodyEl = document.getElementById('app-body');
             const themeBtns = document.querySelectorAll('.theme-btn');
@@ -926,7 +878,6 @@
                 });
             });
 
-            // Mobile Menu Toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuBtn.addEventListener('click', () => {
@@ -936,7 +887,6 @@
                 link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
             });
 
-            // ==================== SYLLABUS RENDER & FILTER ====================
             const syllabusGrid = document.getElementById('syllabus-grid');
             const genreTabs = document.querySelectorAll('.genre-tab');
             const poetrySectionBar = document.getElementById('poetry-section-bar');
@@ -1047,7 +997,6 @@
 
             renderSyllabus();
 
-            // ==================== STUDY GUIDE MODAL LOGIC ====================
             const modal = document.getElementById('study-modal');
             const closeModalBtn = document.getElementById('close-modal-btn');
 
@@ -1073,7 +1022,6 @@
                 document.getElementById('modal-analysis-title').innerHTML = `<i class="fas fa-feather-pointed mr-1.5"></i>${item.analysisTitle}`;
                 document.getElementById('modal-tip').textContent = item.examTip;
 
-                // Deeper Poetry Study Blocks
                 const deepPoetryEl = document.getElementById('modal-deep-poetry');
                 if (item.genre === 'Poetry' && item.formAndTone) {
                     document.getElementById('modal-form-tone').textContent = item.formAndTone;
@@ -1087,7 +1035,6 @@
                     deepPoetryEl.classList.remove('grid');
                 }
 
-                // Handle Drive PDF Links visibility
                 const pdfContainer = document.getElementById('modal-pdf-container');
                 const previewBtn = document.getElementById('modal-preview-btn');
                 const downloadBtn = document.getElementById('modal-download-btn');
@@ -1142,7 +1089,6 @@
                 if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
             });
 
-            // ==================== LITERARY DEVICES RENDER & SEARCH ====================
             const devicesGrid = document.getElementById('devices-grid');
             const deviceSearch = document.getElementById('device-search');
 
